@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>采集侠</title>
+<link href="<?php echo $css?>/base.css" rel="stylesheet" type="text/css">
+<link href="apps/CaiJiXia/style/cjx.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" id="cjxjq" src="<?php echo $cjxhost?>/Plugins/apps/CaiJiXia/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="apps/CaiJiXia/style/dialog.js"></script>
+<script type="text/javascript" src="apps/CaiJiXia/style/cjx.js"></script>
+</head>
+<body topmargin="8">
+<table width="98%"  border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D1DDAA">
+  <form name="form1" id="form1" action="###" method="post">
+    <tr> 
+      <td height="20" colspan="2" background="<?php echo $img?>/tbg.gif"> <b>&nbsp;采集侠 &gt; 伪原创设置：</b> </td>
+    </tr>
+    <tr>
+      <td width="19%" align="center" bgcolor="#FFFFFF">伪原创比例：</td>
+      <td width="81%" bgcolor="#FFFFFF">
+      <input name="setting[kw_percent]" type="text" value="<?php echo $kw_percent;?>" size="10" maxlength="3">%
+      <span style="color:#666">（0-100，影响本页以下选项，每100篇文章中伪原创的数量）</span></td>
+    </tr>
+    <tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">自动标题：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input type="radio" name="setting[kw_autotitle]" value="1" <?php if($kw_autotitle==1) echo 'checked';?>>是
+        <input name="setting[kw_autotitle]" type="radio" value="0" <?php if($kw_autotitle==0) echo 'checked';?>>否
+        <span style="color:#666">（从正文内提取一段内容做为文章标题，影响文章可读性，利于收录）</span>
+        </td>
+    </tr>
+    <tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">段落重排：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input type="radio" name="setting[kw_autopara]" value="1" <?php if($kw_autopara==1) echo 'checked';?>>是
+        <input name="setting[kw_autopara]" type="radio" value="0" <?php if($kw_autopara==0) echo 'checked';?>>否
+        <span style="color:#666">（随机排列正文段落，高级伪原创方式，影响文章可读性，利于收录）</span>
+        </td>
+    </tr>	
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">高级混淆：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input type="radio" name="setting[kw_autoconfu]" value="1" <?php if($kw_autoconfu==1) echo 'checked';?>>是
+        <input name="setting[kw_autoconfu]" type="radio" value="0" <?php if($kw_autoconfu==0) echo 'checked';?>>否
+        <span style="color:#666">（随机排列正文语句，高级伪原创方式，影响文章可读性，利于收录）</span>
+        </td>
+    </tr>
+	
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">标题随机插入关键词位置：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input type="radio" name="setting[kw_ttis]" value="0" <?php if($kw_ttis==0) echo 'checked';?>>前
+        <input name="setting[kw_ttis]" type="radio" value="1" <?php if($kw_ttis==1) echo 'checked';?>>后
+		<input name="setting[kw_ttis]" type="radio" value="2" <?php if($kw_ttis==2) echo 'checked';?>>随机
+        </td>
+    </tr>
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">标题随机插入关键词列表：</td>
+        <td width="81%" bgcolor="#FFFFFF">多个关键词用'|'分开，例：最好的采集插件|全自动采集插件<br>
+        <textarea name="setting[kw_ttls]" cols="100" rows="5"><?php echo $kw_ttls;?></textarea></td>
+    </tr>
+	
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">标题同义词替换：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input type="radio" name="setting[kw_ttf]" value="1" <?php if($kw_ttf==1) echo 'checked';?>>是
+        <input name="setting[kw_ttf]" type="radio" value="0" <?php if($kw_ttf==0) echo 'checked';?>>否
+        <span style="color:#666">（同义词替换设置是否对标题产生影响）</span>
+        </td>
+    </tr>
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">同义词替换：<br>（建议5000以内）</td>
+        <td width="81%" bgcolor="#FFFFFF">每行一对同义词，半角逗号分隔双向替换，→分隔单向替换<br>
+		如：<br>
+		高兴,幸福<br>
+		高兴→幸福<br>
+        <textarea name="setting[kw_relaword]" cols="100" rows="20"><?php echo $kw_relaword;?></textarea></td>
+    </tr>
+
+    <tr bgcolor="#F9FDF0"> 
+      <td height="28" colspan="2">
+      	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="26%">&nbsp;</td>
+            <td width="15%"><input name="imageField" class="np" type="image" src="<?php echo $img?>/button_ok.gif" width="60" height="22" border="0"></td>
+            <td width="59%"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </form>
+</table>
+<div id="footer" style="text-align:center; padding:10px;"></div>
+<script type="text/javascript">$(function(){$.getScript("http://www.yikenw.com/ad/dedecjx_footer.js");})</script>
+</body>
+</html>

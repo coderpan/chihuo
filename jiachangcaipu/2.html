@@ -1,0 +1,801 @@
+﻿<!doctype html>
+
+<meta charset="utf-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+
+<META content= name=keywords>
+<META content= name=description>
+
+<link href="/templets/style/css/common.css" rel="stylesheet">
+
+<link href="/templets/style/css/list.css" rel="stylesheet">
+
+<script src="/templets/style/js/jquery1.8.3.min.js" charset="utf-8"></script>
+
+<link href="favicon.ico" type="image/x-icon">
+
+<base target="_blank">
+
+<div class="topbar">
+
+    <div class="w980">
+
+        <div class="bar_l">
+
+            <span id="set_home">设为首页</span>
+
+            <span id="set_fav">加入收藏</span>
+
+        </div>
+
+        <div class="bar_r">
+
+            <a class="webmap" style="">网站导航</a>
+
+            <div class="bar_menu">
+
+                <a class="category" href="http://www.chinacaipu.com/">中国菜谱网</a>
+
+                <div class="m_list">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>  
+
+</div>
+
+
+
+<!--<div class="ad960"><script src="style/js/ad_index_baidu_960X90.js"></script></div>-->
+
+ <div class="header">
+
+    <h1 class="logo"><a href="http://www.chinacaipu.com">中国菜谱网</a></h1>
+
+    <div class="search">
+
+       <form name="so" method="GET" action="/build/search.php">
+
+        <span class="inputwrap">
+
+        <input class="searchinput" name='keyword' type="text"  placeholder="更快速更准确的菜谱搜索" autocomplete="off" autofocus="true" x-webkit-speech="" x-webkit-grammar="builtin:translate" >
+
+        </span>
+
+        <input class="searchbtn" type="submit" value="">
+
+        </form >
+
+    </div>
+
+</div>
+
+<div class="navwrap">
+
+    <div class="nav">
+
+        <div class="lnav" id="navitem">
+
+            <a  href="/"><i>首页</i></a>
+
+                          <a  class='cur' href="/menu/jiachangcaipu"><i>家常菜谱</i></a>
+
+                          <a   href="/menu/chinacaipu"><i>中国菜谱</i></a>
+
+                          <a   href="/menu/hongpei"><i>烘培</i></a>
+
+                          <a   href="/menu/foreignshipu"><i>外国食谱</i></a>
+
+                          <a   href="/menu/mimian"><i>米面杂粮</i></a>
+
+                          <a   href="/menu/yinshijiankang"><i>饮食健康</i></a>
+
+                          <a   href="/menu/shishangyinpin"><i>时尚饮品</i></a>
+
+                          <a   href="/menu/qinzi"><i>亲子频道</i></a>
+
+                          <a   href="/menu/chufang"><i>快乐厨房</i></a>
+
+                       <a href="/menu/jiankangyangsheng"><i>健康养生</i></a>
+
+        </div>
+
+    </div>
+
+    <ul class="navlist" id="navlist">
+
+           <li class='hidden'>
+
+            <a href="/menu/rouleishipu">肉类食谱</a>
+
+            <a href="/menu/qinleishipu">禽类食谱</a>
+
+            <a href="/menu/hunanmeishi">湖南美食</a>
+
+            <a href="/menu/dianxinshipin">点心食品</a>
+
+            <a href="/menu/ribenliaoli">日本料理</a>
+
+            <a href="/menu/xicanmiandian">西餐面点</a>
+
+            <a href="/menu/shoushenmeirong">瘦身美容</a>
+
+            <a href="/menu/meishi">美食DIY</a>
+
+                      <li >
+
+                                  <a class='current'href="/menu/shuichanshipu">水产类菜谱</a>
+
+                                  <a href="/menu/tangbaozhoushipu">汤煲粥类食谱</a>
+
+                                  <a href="/menu/rouleishipu">肉类食谱</a>
+
+                                  <a href="/menu/sushishipu">素食食谱</a>
+
+                                  <a href="/menu/liangbancai">凉拌菜</a>
+
+                                  <a href="/menu/qinleishipu">禽类食谱</a>
+
+                                  <a href="/menu/danleishipu">蛋类食谱</a>
+
+                       </li>
+
+                     <li class='hidden'>
+
+                                  <a href="/menu/jingcaishipu">京菜食谱</a>
+
+                                  <a href="/menu/sichuanfengwei">四川风味</a>
+
+                                  <a href="/menu/shanghaimeishi">上海美食</a>
+
+                                  <a href="/menu/dongbeifengwei">东北风味</a>
+
+                                  <a href="/menu/guangdongecai">广东粤菜</a>
+
+                                  <a href="/menu/kejiacai">客家菜</a>
+
+                                  <a href="/menu/hubeimeishi">湖北美食</a>
+
+                                  <a href="/menu/hunanmeishi">湖南美食</a>
+
+                                  <a href="/menu/huaiyangcai">淮扬菜</a>
+
+                                  <a href="/menu/hainanshipu">海南食谱</a>
+
+                                  <a href="/menu/zhecai">浙菜</a>
+
+                                  <a href="/menu/shandonglucai">山东鲁菜</a>
+
+                                  <a href="/menu/jiangsumeishi">江苏美食</a>
+
+                                  <a href="/menu/anhuimeishi">安徽美食</a>
+
+                                  <a href="/menu/fujianmeishi">福建美食</a>
+
+                                  <a href="/menu/tianjinmeishi">天津美食</a>
+
+                                  <a href="/menu/yunnanmeishi">云南美食</a>
+
+                                  <a href="/menu/chaozhoucai">潮州菜</a>
+
+                                  <a href="/menu/guangximeishi">广西美食</a>
+
+                                  <a href="/menu/taiwancai">台湾菜</a>
+
+                                  <a href="/menu/teseshipin">民俗特色食品</a>
+
+                                  <a href="/menu/dianxinshipin">点心食品</a>
+
+                                  <a href="/menu/mimianzhushi">米面主食</a>
+
+                                  <a href="/menu/huoguodiliaojipeifang">火锅底料及配方</a>
+
+                       </li>
+
+                     <li class='hidden'>
+
+                                  <a href="/menu/mianbao">面包</a>
+
+                                  <a href="/menu/dangao">蛋糕</a>
+
+                                  <a href="/menu/tusi">土司</a>
+
+                                  <a href="/menu/binggan">饼干</a>
+
+                                  <a href="/menu/mafen">玛芬</a>
+
+                                  <a href="/menu/yuebing">月饼</a>
+
+                       </li>
+
+                     <li class='hidden'>
+
+                                  <a href="/menu/hanguoliaoli">韩国料理</a>
+
+                                  <a href="/menu/faguodacan">法国大餐</a>
+
+                                  <a href="/menu/yidalimeishi">意大利美食</a>
+
+                                  <a href="/menu/ribenliaoli">日本料理</a>
+
+                                  <a href="/menu/meiguoshipu">美国食谱</a>
+
+                                  <a href="/menu/xican">西餐</a>
+
+                                  <a href="/menu/xicanmiandian">西餐面点</a>
+
+                       </li>
+
+                     <li class='hidden'>
+
+                                  <a href="/menu/mifan">米饭</a>
+
+                                  <a href="/menu/mianshi">面食</a>
+
+                                  <a href="/menu/baozi">包子,花卷</a>
+
+                                  <a href="/menu/bingzi">饼子</a>
+
+                       </li>
+
+                     <li class='hidden'>
+
+                                  <a href="/menu/jiankangyinshi">健康饮食</a>
+
+                                  <a href="/menu/shoushenmeirong">瘦身美容</a>
+
+                                  <a href="/menu/shiliaoshibu">食疗食补</a>
+
+                                  <a href="/menu/yaoshanshipu">药膳食谱</a>
+
+                       </li>
+
+                     <li class='hidden'>
+
+                                  <a href="/menu/jiujingyinpin">含酒精饮品</a>
+
+                                  <a href="/menu/ca">茶及咖啡饮品</a>
+
+                                  <a href="/menu/guozhi">果汁及其他饮品</a>
+
+                       </li>
+
+                     <li class='hidden'>
+
+                                  <a href="/menu/ertongshipin">儿童食品</a>
+
+                                  <a href="/menu/nvxingbaojian">女性保健</a>
+
+                                  <a href="/menu/haizijiankang">孩子健康</a>
+
+                                  <a href="/menu/yunyingbaojian">孕婴保健</a>
+
+                       </li>
+
+                     <li class='hidden'>
+
+                                  <a href="/menu/meishi">美食DIY</a>
+
+                                  <a href="/menu/pengrenjifa">烹饪技法</a>
+
+                                  <a href="/menu/pengrenqiaomen">烹饪小窍门</a>
+
+                                  <a href="/menu/chuju">厨具使用及选购</a>
+
+                                  <a href="/menu/shicaijiagong">食材加工</a>
+
+                       </li>
+
+                     <li class='hidden'>
+
+                                  <a href="/menu/zhongyiyangsheng">中医养生</a>
+
+                                  <a href="/menu/yinshiyangsheng">饮食养生</a>
+
+                                  <a href="/menu/yundongyangsheng">运动养生</a>
+
+                                  <a href="/menu/renqunyangsheng">人群养生</a>
+
+                                  <a href="/menu/jibingyufang">疾病预防</a>
+
+                                  <a href="/menu/liangxingjiankang">两性健康</a>
+
+                                  <a href="/menu/jiankangxinli">健康心理</a>
+
+                                  <a href="/menu/yangshengtuku">养生图库</a>
+
+                       </li>
+
+              </ul>
+
+</div>
+
+<div class="w980 clearfix">
+
+    <div class="w640">  
+
+        <div class="crumbs">你的位置 : </div>
+
+        <h1 class="contit">生菜炒羊肉片</h1>
+
+        <div class="info">
+
+                   <div class="guanzhu"></div>
+
+        </div>
+
+        <script src='style/js/ad_nei_baidu_580X90.js'></script>
+
+                <div class="content">
+
+<p style="text-align: left;">冬季进补要分清体质，进补必须因人而异。如果你在冬天手脚冰冷，属于阳虚体质(最好有医生诊断)，那就要吃一些热性的食材。 比如羊肉，最适合冬天吃啦。 炒羊肉片非常快捷，食材</p>
+
+<p>　<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; text-align: center; ">
+	<img alt="" height="281" src="/uploads/allimg/131231/201934L93-0.jpg" style="vertical-align: top; border: 0px; " width="400" /></p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　冬季进补要分清体质，进补必须因人而异。如果你在冬天手脚冰冷，属于阳虚体质(最好有医生诊断)，那就要吃一些热性的食材。</p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　比如羊肉，最适合冬天吃啦。</p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　炒羊肉片非常快捷，食材齐全，10分钟就搞定一道快手养生菜，对于上班族来说再方便不过了。</p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　话说小毛葱：</p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　小毛葱是分蘖毛葱，在东北很多地方有种植。一株可以分蘖十多个小毛葱，它的形状和味道与大的毛葱几乎没有区别，个人以为小毛葱味道更浓郁，炒鸡蛋更香。</p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　东北人也喜欢用它蘸酱直接吃，小毛葱非常紧实，可以贮存很久不腐烂。</p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　------------------------------------------------------------------------------------------------</p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　主主料：</p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　羊肉片250克，生菜150克，红美人椒2个，小毛葱2个。</p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　调料：</p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　羊肉串腌制料一小勺，孜然粉1/2小勺，鸡精1/2小勺，熟白芝麻1小勺，植物油1小勺。</p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　准备工作：</p>
+<p style="margin: 20px 0px 0px; padding: 0px; color: rgb(0, 0, 0); font-family: arial, 宋体; font-size: 14px; line-height: 24px; ">
+	　　生菜掰开，洗净控干。</p>
+</p>
+
+<p> </p>
+
+<p>相关文章：<strong>墨鱼最宜女性保健</strong>
+
+        </div>
+
+        <div class="page">
+
+           <span class=disabled><u></u>上一页</span><span class='current'><u></u>1</span><a title='第2页' href='/menu/shuichanshipu/70214_2.html' target='_self'><u></u>2</a><a title='第3页' href='/menu/shuichanshipu/70214_3.html' target='_self'><u></u>3</a><a title='下一页' href='/menu/shuichanshipu/70214_2.html' target='_self'><u></u>下一页</a>
+
+        </div>
+
+        <script src='style/js/ad_nei_baidu_640X90.js'></script>
+
+        <div class="con_tool">
+
+            <div class="share">
+
+                <!-- Baidu Button BEGIN -->
+
+                <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
+
+                <code>分享到：</code>
+
+                <a class="bds_qzone"></a>
+
+                <a class="bds_tsina"></a>
+
+                <a class="bds_tqq"></a>
+
+                <a class="bds_renren"></a>
+
+                <a class="bds_t163"></a>
+
+                <span class="bds_more"></span>
+
+                </div>
+
+                <!-- Baidu Button END -->
+
+            </div>
+
+            <span class="con_print" id="con_print">打印</span>
+
+        </div>
+
+                        <div id="temp1">
+
+            <div class="w640t">
+
+                <h2>相关菜谱</h2>
+
+                <ul class="JQ-nav"><li class="on"></li><li></li></ul>
+
+            </div>
+
+                <ul class="JQ-content cppic">
+
+                <li><p>
+
+                                      <a href="/menu/shuichanshipu/4494.html"><img src="style/images/small68bd750fb7aeb98e6457c8a2d696ae911383817460.jpg" alt="酱爆鱿鱼须">酱爆鱿鱼须</a>
+
+                                      <a href="/menu/shuichanshipu/6982.html"><img src="style/images/small62506e90cd8b0712db8af2135c7bcb9e1383818262.jpg" alt="酱爆鱿鱼(2)">酱爆鱿鱼(2)</a>
+
+                                      <a href="/menu/qinleishipu/7982.html"><img src="style/images/smallcaf9bd845de8ab877f365e8bbee103041383818830.jpg" alt="酱爆鸡丁-分解七项酱爆流程">酱爆鸡丁-分解七项酱爆流程</a>
+
+                                      <a href="/menu/shanghaimeishi/4827.html"><img src="style/images/small8e440bfc56375b88dcd781b743bf61891383817564.jpg" alt="酱爆猪心">酱爆猪心</a>
+
+                                      <a href="/menu/shuichanshipu/6227.html"><img src="style/images/smallcdca990b64ab5b2d40492891a4b6088b1383818028.jpg" alt="酱爆花蛤">酱爆花蛤</a>
+
+                                      <a href="/menu/shuichanshipu/6087.html"><img src="style/images/small463db8b124a0b8f5090886bfab0233e71383817989.jpg" alt="酱爆海瓜子">酱爆海瓜子</a>
+
+                                      <a href="/menu/shuichanshipu/7345.html"><img src="style/images/smallf5d36a74581db9dae886dadd634dd2f11383818407.jpg" alt="酱爆鱿鱼">酱爆鱿鱼</a>
+
+                                      <a href="/menu/shandonglucai/2298.html"><img src="style/images/smallac120db823fd7b57dfc2642ae6e6961c1383816843.jpg" alt="酱爆鸡脯丁的做法">酱爆鸡脯丁的做法</a>
+
+                                   </p>
+
+                                <li class="hid"><p>
+
+                                      <a href="/menu/qinleishipu/4390.html"><img src="style/images/small7c5d70843aad725db02361ebb809b32c1383817424.jpg" alt="酱爆桃仁儿鸡丁">酱爆桃仁儿鸡丁</a>
+
+                                      <a href="/menu/sushishipu/8364.html"><img src="style/images/small80e189a0236ed48b5b0e4351408f3aab1383819175.jpg" alt="酱爆辣子茄丁">酱爆辣子茄丁</a>
+
+                                      <a href="/menu/qinleishipu/5060.html"><img src="style/images/small153ce8df536c4857020cb3f6726c9e121383817660.jpg" alt="酱爆鸭肉">酱爆鸭肉</a>
+
+                                      <a href="/menu/shuichanshipu/6779.html"><img src="style/images/smallf550e4e2051de41f72f00cb5600d5bce1383818199.jpg" alt="酱爆蚍蛴">酱爆蚍蛴</a>
+
+                                      <a href="/menu/dongbeifengwei/2937.html"><img src="style/images/smallbeefbbc3dc531dd5f33228a86508abb31383817026.jpg" alt="酱爆花蛤的做法">酱爆花蛤的做法</a>
+
+                                      <a href="/menu/shuichanshipu/7881.html"><img src="style/images/smallc63b08e57438848d3be18fec2ae6f5d81383818741.jpg" alt="酱爆东风螺">酱爆东风螺</a>
+
+                                      <a href="/menu/sushishipu/7815.html"><img src="style/images/small9f7b94ddf5f6ed15240d5b20af9fec751383818685.jpg" alt="酱爆双鲜">酱爆双鲜</a>
+
+                                   </p>
+
+                                </ul>
+
+        </div>
+
+                <div class="bottom_640X90">
+
+            <script src="style/js/ad_nei_taobao_640X90.js"></script>
+
+        </div>
+
+        <div class="w640t"><h2>网友评论</h2></div>
+
+        <div class="pinlun">
+
+           <!-- UY BEGIN -->
+
+           <div id="uyan_frame"></div>
+
+           <script type="text/javascript" src="style/js/uyan.js"></script>
+
+           <!-- UY END -->
+
+        </div>
+
+        <div class="w640t"><h2>大家都在看</h2></div>
+
+        <div class="cppic">
+
+            <p>
+
+                                <a href="/menu/sichuanfengwei/70273.html"><img src="style/images/small4e09b15de0669a0ffdfd3e9b25fe773a1387529433.jpg" alt="水煮鱼腩麻辣鲜香一锅烩">水煮鱼腩麻辣鲜香一锅烩</a>
+
+                                <a href="/menu/sichuanfengwei/70244.html"><img src="style/images/smallce36cd72ac5fd025e264d7dc306f124b1387430898.jpg" alt="锅盔回锅肉">锅盔回锅肉</a>
+
+                                <a href="/menu/jingcaishipu/69998.html"><img src="style/images/24af4c7901ac321d64ef20c0e30f62a3.jpg" alt="小米鲜虾疙瘩汤">小米鲜虾疙瘩汤</a>
+
+                                <a href="/menu/jingcaishipu/69853.html"><img src="style/images/ed93f4bda92a1dccda8c872864014579.jpg" alt="椒盐炸茄盒儿">椒盐炸茄盒儿</a>
+
+                                <a href="/menu/sichuanfengwei/69837.html"><img src="style/images/small843e68eaa57307f1b04c9091ab3518f71384313096.jpg" alt="馋嘴鸭舌">馋嘴鸭舌</a>
+
+                                <a href="/menu/sichuanfengwei/70017.html"><img src="style/images/small279331d5ce7d3f916af2cb3b0345c2061385609483.jpg" alt="牛肉抄手">牛肉抄手</a>
+
+                                <a href="/menu/sichuanfengwei/70031.html"><img src="style/images/small438c7fb032eb94bc995966740b3bd4351385628858.jpg" alt="雪豆炖蹄花">雪豆炖蹄花</a>
+
+                                <a href="/menu/sichuanfengwei/70149.html"><img src="style/images/smallb34b6b014dc5e31fa8d93fdbcb5153731386665229.jpg" alt="水煮牛蛙">水煮牛蛙</a>
+
+                            </p>
+
+        </div>
+
+        <div id="temp2">
+
+            <div class="w640t">
+
+                <h2>你可能还喜欢</h2>
+
+                <div class="JQ-nav"><a class="next" href="#">换一换</a></div>
+
+            </div>
+
+            <ul class="JQ-content favpic">
+
+                <li><p>
+
+                                <a href="/menu/rouleishipu/69899.html"><img src="style/images/b00e1d3032cc9bfb89c2da86af5ebfd2.jpg" alt="葱烧大排">葱烧大排</a>
+
+                                <a href="/menu/teseshipin/70209.html"><img src="style/images/c5b83e56d9e45c14667dc6eb221caedc.jpg" alt="竹筒饭">竹筒饭</a>
+
+                                <a href="/menu/qinleishipu/69908.html"><img src="style/images/small7db2cc0bc4eae3d47228688f7d1b6a731385090667.jpg" alt="干锅麦香老鸭">干锅麦香老鸭</a>
+
+                                <a href="/menu/rouleishipu/70160.html"><img src="style/images/230c4cefe54622e971d673d6650af3b9.jpg" alt="枣香小排">枣香小排</a>
+
+                                </p>
+
+                                <li>
+
+                <p>
+
+                                <a href="/menu/qinleishipu/70161.html"><img src="style/images/c41d5442c5ebd596683233c84d3fb9eb.jpg" alt="干锅凤爪">干锅凤爪</a>
+
+                                <a href="/menu/shuichanshipu/70164.html"><img src="style/images/small60f999f064da6ba8c8804f6c1ccad72c1386751952.jpg" alt="文蛤蒸蛋">文蛤蒸蛋</a>
+
+                                <a href="/menu/rouleishipu/70163.html"><img src="style/images/small69f2c7a4142ea04d4a2739e4ceaf71091386749954.jpg" alt="腐乳猪手">腐乳猪手</a>
+
+                                <a href="/menu/shuichanshipu/69903.html"><img src="style/images/774dd8e297a0602238db10f8cd623fb4.jpg" alt="葱香油爆虾">葱香油爆虾</a>
+
+                                </p>
+
+                            </ul>
+
+        </div>
+
+        <div class="ft_ad_640*200"><script type="text/javascript" src="style/js/ad_nei_baidu_dibu_yun.js"></script></div>
+
+    </div>
+
+    <div class="w300">
+
+        <div class="ad300">
+
+                  <script src="style/js/ad_nei_baidu_300X250_1.js"></script>
+
+                </div>
+
+        <h2 class="w300h2">热门食材</h2>
+
+        <div class="rmsc">
+
+                        <a href="http://www.chinacaipu.com/zhuanti/guojiang.html">果酱</a>
+
+                        <a href="http://www.chinacaipu.com/zhuanti/huangguajidan.html">黄瓜鸡蛋</a>
+
+                        <a href="http://www.chinacaipu.com/zhuanti/doufuyu.html">豆腐鱼</a>
+
+                        <a href="http://www.chinacaipu.com/zhuanti/niuroufanqie.html">牛肉番茄</a>
+
+                        <a href="http://www.chinacaipu.com/html/zhuanti547.html">饼干</a>
+
+                        <a href="http://www.chinacaipu.com/html/zhuanti158.html">番茄</a>
+
+                        <a href="http://www.chinacaipu.com/html/zhuanti141.html">土豆</a>
+
+                        <a href="http://www.chinacaipu.com/html/zhuanti140.html">茄子</a>
+
+                        <a href="http://www.chinacaipu.com/html/zhuanti139.html">排骨</a>
+
+                        <a href="http://www.chinacaipu.com/html/zhuanti137.html">萝卜</a>
+
+                    </div>
+
+        <h2 class="w300h2">专题推荐</h2>
+
+        <ul class="zttj">
+
+                                     <li><a href="http://www.chinacaipu.com/html/zhuanti143.html">黄瓜的做法</a><a href="http://www.chinacaipu.com/html/zhuanti101.html">蛋糕的做法</a><a href="http://www.chinacaipu.com/html/zhuanti73.html">鸡蛋的做法</a><a href="http://www.chinacaipu.com/html/zhuanti68.html">火锅的做法</a>                        <li><a href="http://www.chinacaipu.com/html/zhuanti20.html">鸡翅的做法</a><a href="http://www.chinacaipu.com/html/zhuanti18.html">土豆的做法</a><a href="http://www.chinacaipu.com/html/zhuanti16.html">排骨的做法</a><a href="http://www.chinacaipu.com/html/zhuanti15.html">牛肉的做法</a>                        <li><a href="http://www.chinacaipu.com/html/zhuanti12.html">鸡的做法</a><a href="http://www.chinacaipu.com/zhuanti/doufu.html">豆腐的做法</a>                    </ul>
+
+        <div class="ztpic">
+
+            <ul>
+
+                                                <li>
+
+                                        <a href="/menu/dazhongjiankang/70169.html"><img src="style/images/9d0f1219e254715a644712777ec100af.jpg" title="这样喝水，可以治百病"></a>
+
+                    <h3><span class="cr">常识</span><a href="/menu/dazhongjiankang/70169.html">这样喝水，可以治百病</a></h3>
+
+                    <p>
+
+                                           <a href="/menu/shicaiyinpin/65841.html">吃鸡蛋的十大错误常识</a>
+
+                                           <a href="/menu/jiankangyingyang/62342.html">幼儿饮食常识</a>
+
+                                           <a href="/menu/bailingyangsheng/34120.html">如何排毒养颜呢</a>
+
+                                           <a href="/menu/jianshen/68694.html">正确的仰卧起坐</a>
+
+                                          </p>
+
+                </li>
+
+                                <li>
+
+                                        <a href="/menu/shoushenmeirong/70180.html"><img src="style/images/fa5324a150440dcbe5b4dda9811abeb5.jpg" title="7种水果帮你减掉腰腹赘肉"></a>
+
+                    <h3><span class="cy">美容</span><a href="/menu/shoushenmeirong/70180.html">7种水果帮你减掉腰腹赘肉</a></h3>
+
+                    <p>
+
+                                           <a href="/menu/shoushenmeirong/28497.html">这些食物会使你皮肤白皙</a>
+
+                                           <a href="/menu/nvxingyangsheng/34362.html">丰胸的四大食谱</a>
+
+                                           <a href="/menu/nvxingyangsheng/34295.html">女性养生饮食</a>
+
+                                           <a href="/menu/nvxingyangsheng/34234.html">女人如何养生？</a>
+
+                                          </p>
+
+                </li>
+
+                                <li>
+
+                                        <a href="/menu/muyingbaojian/35220.html"><img src="style/images/ffdede53a5bbe9c1fe89b10350d57650.jpg" title="宝宝晚上睡觉踢被子8大原因"></a>
+
+                    <h3><span class="cg">母婴</span><a href="/menu/muyingbaojian/35220.html">宝宝晚上睡觉踢被子8大原因</a></h3>
+
+                    <p>
+
+                                           <a href="/menu/haizijiankang/8918.html">调理感冒宝宝</a>
+
+                                           <a href="/menu/ertongshipin/18887.html">新手妈妈DIY辅食诀窍</a>
+
+                                           <a href="/menu/haizijiankang/8751.html">使孩子聪明的食物</a>
+
+                                           <a href="/menu/yunyingbaojian/8443.html">催奶汤</a>
+
+                                          </p>
+
+                </li>
+
+                            </ul>
+
+        </div>
+
+        <div class="ad300 mt20"><script src="style/js/ad_nei_baidu_300X250_2.js"></script></div>
+
+        <h2 class="w300h2">热门推荐</h2>
+
+        <div class="rmtj">
+
+            <ul>
+
+                                <li>
+
+                    <a href="/menu/jingcaishipu/69853.html"><img src="style/images/ed93f4bda92a1dccda8c872864014579.jpg" alt="椒盐炸茄盒儿" title="椒盐炸茄盒儿" /></a>
+
+                    <h3><a href="/menu/jingcaishipu/69853.html">椒盐炸茄盒儿</a></h3>
+
+                    <p>椒盐炸茄盒儿炸茄盒儿是一道京味传统美食，茄子切成茄夹塞以肉馅，外面裹上面糊炸制而成，除了外酥里软的美...<a class="read" href="/menu/jingcaishipu/69853.html">[全文]</a></p>
+
+                                <li>
+
+                    <a href="/menu/shuichanshipu/69903.html"><img src="style/images/774dd8e297a0602238db10f8cd623fb4.jpg" alt="葱香油爆虾" title="葱香油爆虾" /></a>
+
+                    <h3><a href="/menu/shuichanshipu/69903.html">葱香油爆虾</a></h3>
+
+                    <p>油爆虾通常选用中小型虾，用旺火菜籽油锅炸虾，烧好后虾外脆内嫩。加上葱香萦绕，口口鲜嫩。具有通乳调理，...<a class="read" href="/menu/shuichanshipu/69903.html">[全文]</a></p>
+
+                                <li>
+
+                    <a href="/menu/hunanmeishi/70022.html"><img src="style/images/6591079002726a73e3cf7aa08c3b34dc.jpg" alt="荷香小炒肉" title="荷香小炒肉" /></a>
+
+                    <h3><a href="/menu/hunanmeishi/70022.html">荷香小炒肉</a></h3>
+
+                    <p>   导读：今天介绍给大家的小炒肉，祖籍是湖南省，但因为其肉质鲜嫩、油香而不腻、集酸辣鲜香于一身，又...<a class="read" href="/menu/hunanmeishi/70022.html">[全文]</a></p>
+
+                            </ul>
+
+        </div>
+
+        <div class="w300t"><h2>热门食谱</h2></div>
+
+        <div class="rmsc">
+
+                      <a href="/menu/rouleishipu/29485.html">鱼香肉丝</a>
+
+                      <a href="/menu/danleishipu/369.html">乡巴佬卤蛋</a>
+
+                      <a href="/menu/rouleishipu/29209.html">蒜香排骨</a>
+
+                      <a href="/menu/sushishipu/3792.html">铁板豆腐</a>
+
+                      <a href="/menu/qinleishipu/2064.html">白斩鸡</a>
+
+                      <a href="/menu/qinleishipu/1875.html">栗子烧鸡翅</a>
+
+                      <a href="/menu/bingzi/29103.html">葱油饼</a>
+
+                      <a href="/menu/sushishipu/10232.html">干锅土豆</a>
+
+                      <a href="/menu/sushishipu/10127.html">老干妈土豆块</a>
+
+                      <a href="/menu/baozi/17137.html">鲜肉包子</a>
+
+                      <a href="/menu/rouleishipu/33258.html">酱大骨</a>
+
+                      <a href="/menu/qinleishipu/12153.html">土豆烧鸡</a>
+
+                      <a href="/menu/rouleishipu/29426.html">蒜香蜜汁叉烧肉</a>
+
+                      <a href="/menu/sushishipu/10133.html">豆豉辣豆腐</a>
+
+                      <a href="/menu/rouleishipu/33272.html">土豆片烤辣五花</a>
+
+                      <a href="/menu/rouleishipu/32504.html">香辣酱香骨</a>
+
+                      <a href="/menu/qinleishipu/7425.html">蜜汁酱烤鸭腿</a>
+
+                      <a href="/menu/jingcaishipu/6459.html">奶酪肘子</a>
+
+                  </div>
+
+       <script src='style/js/ad_nei_baidu_yun_300X250.js'></script>
+
+        <h2 class="w300h2">美食图片</h2>
+
+        <div class="mstp clearfix">
+
+            <p>
+
+                          <a href="/menu/hunanmeishi/70185.html"><img src="style/images/6a1104d61a5f6579efb2e3d30096074e.jpg"><i>小炒河虾</i></a>
+
+                          <a href="/menu/hainanshipu/70105.html"><img src="style/images/7c1bf9f86775fe8bcd152c52d7a85016.jpg"><i>蒜泥拌炖肉</i></a>
+
+                          <a href="/menu/zhecai/69917.html"><img src="style/images/c1eb4dd70ae8adda9a02728b8df11508.jpg"><i>荷叶粉蒸肉</i></a>
+
+                          <a href="/menu/fujianmeishi/70090.html"><img src="style/images/61931f12e3ec66984375ac0f564d657d.jpg"><i>炸糟鱼</i></a>
+
+                         </p>
+
+        </div>
+
+        <div class="ad300 mt20"><script src="style/js/ad_nei_baidu_300X250_3.js"></script></div>
+
+        <!--height85-->
+
+        <div style="height:85px"></div>
+
+    </div>
+
+</div>
+
+<script src="style/js/footer.js"></script>
+
+<script src="style/js/common.js"></script>
+
+<script src="style/js/list.js"></script>
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&uid=0" ></script>
+
+<script type="text/javascript" id="bdshell_js"></script>
+
+<script type="text/javascript">
+
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+
+</script>
+
+<script src=/e/public/ViewClick/?classid=9&id=70214&addclick=1></script>
+
+<span style=" display:none"><script type="text/javascript">
+
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F44281dcdf56152ca40f5ff0a2e1b0890' type='text/javascript'%3E%3C/script%3E"));
+
+</script></span>
+

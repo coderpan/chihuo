@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>编辑定向采集</title>
+<link href="<?php echo $css?>/base.css" rel="stylesheet" type="text/css">
+<link href="apps/CaiJiXia/style/cjx.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" id="cjxjq" src="<?php echo $cjxhost?>/Plugins/apps/CaiJiXia/jquery-1.3.2.min.js"></script>
+<script type="text/javascript">
+function editpage(){
+	var str = '';
+	$(".dxrulelist input[type='radio']:checked,.dxrulelist input[type='text'],.dxrulelist textarea").each(function(){
+		var val = $(this).val();
+		var name = $(this).attr('name');
+		str += "{dede:"+name+"}"+val+"{/dede:"+name+"}";
+	});
+	var olddata = $("textarea[name='olddata']").val();
+	window.opener.savepage(olddata,str);
+	window.close();
+}
+function testpage(){
+	var str = '';
+	$(".dxrulelist input[type='radio']:checked,.dxrulelist input[type='text'],.dxrulelist textarea").each(function(){
+		var val = $(this).val();
+		var name = $(this).attr('name');
+		str += "{dede:"+name+"}"+val+"{/dede:"+name+"}";
+	});
+	var w=window.open('','',"height=600, width=600, scrollbars=yes");
+	$.post('?ac=testregx&data='+encodeURIComponent(str),function(tmp){
+		w.document.write(tmp);
+		w.document.close();
+	});
+}
+</script>
+</head>
+
+<body>
+<textarea name="olddata" style="display:none"><?php echo $olddata?></textarea>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+       <tr>
+         <td><b>编辑采集规则</b></td>
+       </tr>
+       <tr>
+         <td><div style="margin-top:5px;height:5px;line-height:5px;border-top:solid 1px #CCC;"></div></td>
+       </tr>
+       <tr>
+         <td>
+         <div class="dxrulelist" style="line-height:25px">
+         目标页面编码: <input name="charset" type="radio" value="gb2312" <?php echo $r['charset']=='gb2312'?'checked':''?>>gb2312 
+         				<input name="charset" type="radio" value="utf-8" <?php echo $r['charset']=='utf-8'?'checked':''?>>utf8
+         <div style="height:5px;line-height:5px;"></div>
+         列表url：<input name="list" type="text" style="width:250px" value="<?php echo $r['list']?>"> 统配符[开始页-结束页]，如[0-9]
+         <div style="height:5px;line-height:5px;"></div>
+         文章url：<input name="page" type="text" style="width:250px" value="<?php echo $r['page']?>"> 列表内文章地址，(*)为通配符
+         <div style="height:5px;line-height:5px;"></div>
+          <span style="color:#666">[规则说明]："起始无重复HTML[内容]结尾无重复HTML"，如标题规则：&lt;title&gt;[内容]&lt;/title&gt;</span>
+         <div style="height:5px;line-height:5px;"></div>
+         <div class="ruleinput">
+         标题规则：<textarea name="titlerule" style="width:360px;height:50px;"><?php echo $r['titlerule']?></textarea>
+         <div style="height:5px;line-height:5px;"></div>
+         作者规则：<textarea name="authorrule" style="width:360px;height:50px;"><?php echo $r['authorrule']?></textarea>
+         <div style="height:5px;line-height:5px;"></div>
+         来源规则：<textarea name="sourcerule" style="width:360px;height:50px;"><?php echo $r['sourcerule']?></textarea>
+         <div style="height:5px;line-height:5px;"></div>
+         内容规则：<textarea name="bodyrule" style="width:360px;height:50px;"><?php echo $r['bodyrule']?></textarea>
+		<div style="height:5px;line-height:5px;"></div>
+         分页规则：<textarea name="fyrule" style="width:360px;height:50px;"><?php echo $r['fyrule']?></textarea>
+        </div>
+        <div style="height:5px;line-height:5px;"></div>
+         <input type="button" name="button" value="测试" style="width:60px" onClick="testpage();"/>
+         <input type="button" name="button" value="提交" style="width:60px" onClick="editpage();"/>
+         </div>
+         </td>
+       </tr>
+    </table>
+</body>
+</html>

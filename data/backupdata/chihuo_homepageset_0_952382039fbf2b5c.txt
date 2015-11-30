@@ -1,0 +1,1 @@
+INSERT INTO `chihuo_homepageset` VALUES('chihuo/index.htm','../index.html','1');

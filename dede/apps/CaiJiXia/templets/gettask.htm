@@ -1,0 +1,262 @@
+<script type="text/javascript">
+$(function(){
+	$(".cjxmenu a").click(function(){
+		$(this).css('font-weight','bold').siblings().css('font-weight','normal');
+		var index = $(".cjxmenu a").index(this);
+		$(".formlist .list:eq("+index+")").show().siblings().hide();
+		$(".formlist .list:eq("+index+") .gntip").hide().fadeIn("slow");
+	});
+	setInterval(function(){
+		$(".ruleinput textarea:hidden").val('');
+	},200);
+});
+function addpage()
+{
+	var list = $("input[name=list]").val();
+	var page = $("input[name=page]").val();
+	if(list=="" || list=="http://"){alert("列表url必须设置！");return;}
+	if(page=="" || page=="http://"){alert("文章url必须设置！");return;}
+	var bdc = $("textarea[name=bodyrule]").val();
+	if(bdc==''){
+		if(confirm("您还没有设置内容区域的采集规则，设置规则可以更精确的采集，是否设置？")){
+			$("textarea[name=bodyrule] + input").click();
+			$("textarea[name=bodyrule]").focus();
+			return;
+		}
+	};
+	var str = '';
+	$(".dxrulelist input[type='radio']:checked,.dxrulelist input[type='text'],.dxrulelist textarea").each(function(){
+		var val = $(this).val();
+		var name = $(this).attr('name');
+		str += "{dede:"+name+"}"+val+"{/dede:"+name+"}";
+	});
+	var valobj = $("textarea[name='keyword\[2\]']");
+	var newval = valobj.val()=='' ? str : valobj.val()+"``"+str;
+	valobj.val(newval);
+	$('.dxrule').show();
+	$(".dxrulenote").append("<span><a href='javascript:void(0);' style='float:right' onclick='delpage(this);'>删除</a><a href='javascript:void(0);' style='float:right' onclick='editpage(this);'>编辑&nbsp;</a>"+$("input[name='list']").val()+"</span>");
+	$("input[name='list'],input[name='page']").val('http://');
+	$(".ruleinput input:checkbox").not("input:checked").click();
+}
+function delpage(obj){
+	if(!confirm("您确定要删除吗？")) return false;
+	var index = $(".dxrulenote a").index($(obj));
+	index = parseInt(index/2);
+	var valobj = $("textarea[name='keyword\[2\]']");
+	var val = valobj.val();
+	var vals = val.split("``");
+	val = val.replace(vals[index],'');
+	val=val.replace(/(^``)|(``$)/g,"");
+	valobj.val(val);
+	$($(obj)).parent().remove();
+	$(".unsave").html("尚未保存，请先保存").hide().fadeIn("slow");
+}
+function editpage(obj){
+	var index = $(".dxrulenote a").index($(obj));
+	index = parseInt(index/2);
+	var valobj = $("textarea[name='keyword\[2\]']");
+	var val = valobj.val();
+	var vals = val.split("``");
+	val = vals[index];
+	var w=window.open('','',"height=550, width=580, top=100, left=100");
+	$.post("?ac=edittask&data="+encodeURIComponent(val),function(data){
+		w.document.write(data);
+	});
+	w.document.close();
+};
+function savepage(a,b){
+	if(b==''){alert('规则不能为空');return false;}
+	a = unescape(a);
+	var valobj = $("textarea[name='keyword\[2\]']");
+	var val = valobj.val();
+	val = val.replace(a,b);
+	valobj.val(val);
+	$(".unsave").html("尚未保存，请先保存").hide().fadeIn("slow");
+}
+function testpage()
+{
+	var str = '';
+	$(".dxrulelist input[type='radio']:checked,.dxrulelist input[type='text'],.dxrulelist textarea").each(function(){
+		var val = $(this).val();
+		var name = $(this).attr('name');
+		str += "{dede:"+name+"}"+val+"{/dede:"+name+"}";
+	});
+	var w=window.open('','',"height=600, width=600, scrollbars=yes");
+	$.post('?ac=testregx&data='+encodeURIComponent(str),function(tmp){
+		w.document.write(tmp);
+		w.document.close();
+	});
+}
+function bindtype(nid,obj){
+	var typeid = $("input[name='typeid']").val();
+	$.get("?ac=bindtype&nid="+nid+"&typeid="+typeid,function(data){
+		$(obj).replaceWith('<a href="javascript:void(0)" onclick="unbindtype('+nid+',this);"><b>已绑定</b></a>');
+	})
+}
+function unbindtype(nid,obj){
+	var typeid = $("input[name='typeid']").val();
+	$.get("?ac=unbindtype&nid="+nid+"&typeid="+typeid,function(data){
+		$(obj).replaceWith('<a href="javascript:void(0)" onclick="bindtype('+nid+',this);"><b>未绑定</b></a>');
+	})
+}
+</script>
+<div class="cjxmenu">
+  <a href="javascript:void(0)" style="font-weight:bold">关键词采集</a> | 
+  <a href="javascript:void(0)">RSS采集</a> | 
+  <a href="javascript:void(0)">定向采集</a> | 
+  <a href="javascript:void(0)">绑定采集节点</a>
+</div>
+<div style="margin-top:3px;height:3px;line-height:3px;border-top:solid 1px gray;"></div>
+<form name="addform" action="index.php" method="post" onSubmit="return check()">
+  <input type="hidden" name="typeid" value="<?php echo $typeid ?>" />
+  <input type="hidden" name="m" value="1" />
+<div class="formlist">
+  <div class="list">
+  	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+       <tr>
+         <td>
+         <div style="background-color:#FCFE9C;margin:5px;padding:2px;" class="gntip">关键词采集是采集侠自动根据关键词到搜索引擎里搜索，根据搜索引擎的结果进行采集，从而获得搜索引擎高权重文章的一种采集方法</div>
+        </td>
+       </tr>
+       <tr>
+         <td><b>关键词：</b>(推荐)<span class="free"><font color="red">(每行一个)</font></span>
+         </td>
+       </tr>
+       <tr>
+         <td>
+         <textarea class="keyword" name="keyword[0]" style="width:550px;height:220px"><?php echo $keyword?></textarea>
+        </td>
+       </tr>
+     </table>
+  </div>
+  <div style="display:none;" class="list">
+  	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+       <tr>
+         <td>
+         <div style="background-color:#FCFE9C;margin:5px;padding:3px;" class="gntip">RSS采集是采集侠自动监控RSS地址进行文章采集的一种方法</div>
+        </td>
+       </tr>
+       <tr>
+         <td><b>RSS地址：</b><span class="free"><font color="red">(每行一个)</font></span></td>
+       </tr>
+       <tr>
+         <td><textarea class="keyword" name="keyword[1]" style="width:550px;height:220px"><?php echo $rss?></textarea></td>
+       </tr>
+   	</table>
+  </div>
+  <div style="display:none;" class="list">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+       <tr>
+         <td>
+         <div style="background-color:#FCFE9C;margin:5px;padding:3px;" class="gntip">定向采集是我们开发的一项简单采集功能，与插件紧密结合，设置简单明了，自动采集，自动伪原创</div>
+        </td>
+       </tr>
+       
+       <tr>
+         <td onclick="$('.dxrule').toggle();" style="cursor:pointer" onmouseover="javascript:this.bgColor='#DBDBDB'" onmouseout="javascript:this.bgColor='#FFFFFF'"><b>采集规则列表：<a href="javascript:void(0)"><img src="apps/CaiJiXia/style/file_tt.gif"/></a></b>
+         </td>
+       </tr>
+       <tr>
+         <td>
+         <div style="border:solid 1px #CCC;padding:8px;margin:8px;height:120px;overflow:auto;" class="dxrule">
+         	<div class="dxrulenote"><?php echo $dxs?></div>
+            <textarea name="keyword[2]" class="keyword" style="display:none"><?php echo $dx ?></textarea>
+        </div>
+		</td>
+       </tr>
+       <tr>
+         <td><div style="margin-top:5px;height:5px;line-height:5px;border-top:solid 1px #CCC;"></div></td>
+       </tr>
+       <tr>
+         <td onclick="$('.dxrulelist').toggle();" style="cursor:pointer" onmouseover="javascript:this.bgColor='#DBDBDB'" onmouseout="javascript:this.bgColor='#FFFFFF'"><b>添加采集规则：<a href="javascript:void(0)"><img src="apps/CaiJiXia/style/file_tt.gif"/></a></b></td>
+       </tr>
+       <tr>
+         <td>
+         <div class="dxrulelist" style="display:none;line-height:25px">
+		 <span style="float:right;"><a href="http://www.dedeadmin.com/?p=2748" target="_blank" style="color: red; font-weight:bold;">查看设置方法</a></span>
+         目标页面编码: <input name="charset" type="radio" value="gb2312" checked>gb2312 
+         				<input name="charset" type="radio" value="utf-8">utf8
+         <div style="height:5px;line-height:5px;"></div>
+         列表url：<input name="list" type="text" style="width:250px" value="http://"> 统配符[开始页-结束页]，如[0-9]
+         <div style="height:5px;line-height:5px;"></div>
+         文章url：<input name="page" type="text" style="width:250px" value="http://"> 列表内文章地址，(*)为通配符
+         <div style="height:5px;line-height:5px;"></div>
+          <span style="color:#666">[规则说明]："起始无重复HTML[内容]结尾无重复HTML"，如标题规则：&lt;title&gt;[内容]&lt;/title&gt;</span>
+         <div style="height:5px;line-height:5px;"></div>
+         <div class="ruleinput">
+         标题规则：<textarea name="titlerule" style="width:360px;height:50px;display:none;"></textarea> <input type="checkbox" checked="checked" onclick="$('textarea[name=\'titlerule\']').toggle();"/>自动
+         <div style="height:5px;line-height:5px;"></div>
+         作者规则：<textarea name="authorrule" style="width:360px;height:50px;display:none;"></textarea> <input name="" type="checkbox" value="" checked="checked"  onclick="$('textarea[name=\'authorrule\']').toggle();"/>自动
+         <div style="height:5px;line-height:5px;"></div>
+         来源规则：<textarea name="sourcerule" style="width:360px;height:50px;display:none;"></textarea> <input name="" type="checkbox" value="" checked="checked"  onclick="$('textarea[name=\'sourcerule\']').toggle();"/>自动
+         <div style="height:5px;line-height:5px;"></div>
+         内容规则：<textarea name="bodyrule" style="width:360px;height:50px;display:none;"></textarea> <input name="" type="checkbox" value="" checked="checked"  onclick="$('textarea[name=\'bodyrule\']').toggle();"/>自动
+		<div style="height:5px;line-height:5px;"></div>
+         分页规则：<textarea name="fyrule" style="width:360px;height:50px;display:none;"></textarea> <input name="" type="checkbox" value="" checked="checked"  onclick="$('textarea[name=\'fyrule\']').toggle();"/>自动
+        </div>
+        <div style="height:5px;line-height:5px;"></div>
+         <input type="button" name="button" value="测试" style="width:60px" onClick="testpage();"/>
+         <input type="button" name="button" value="添加" style="width:60px" onClick="addpage();"/>
+         </div>
+         </td>
+       </tr>
+    </table>
+  </div>
+  <div style="display:none;" class="list">
+  	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+       <tr>
+         <td>
+         <div style="background-color:#FCFE9C;margin:5px;padding:3px;" class="gntip">绑定采集节点功能是采集侠与dedecms内置采集模块结合，让内置采集拥有自动采集，自动伪原创功能。</div>
+        </td>
+       </tr>
+       <tr>
+         <td><b>绑定采集节点：</b></td>
+       </tr>
+       <tr>
+         <td>
+            <table width="98%" border="0" cellspacing="1" bgcolor="#D6D6D6" align="center">
+              <tr bgcolor="#FBFCE2" align="center">
+                <td>节点名称</td>
+                <td>针对规则</td>
+                <td>是否绑定</td>
+              </tr>
+              
+              <?php if(!empty($notelist)) foreach($notelist as $r){ ?>
+              <tr bgcolor="#ffffff" align="center">
+                <td><?php echo $r['notename']?></td>
+                <td><?php echo $r['channelname']?></td>
+                <td><?php if(!empty($r['btype'])){
+                		if($r['btype']===true){
+                        	echo '<a href="javascript:void(0)" onclick="unbindtype('.$r['nid'].',this);"><b>已绑定</b></a>';
+                        }else{
+                        	echo '已绑定栏目'.$r['btype'];
+                        }
+                	}else{
+                    	echo '<a href="javascript:void(0)" onclick="bindtype('.$r['nid'].',this);"><b>未绑定</b></a>';
+                    } ?></td>
+              </tr>
+              <?php }else{ ?>
+               <tr>
+                 <td><font color="red">请先到系统内添加采集规则</font></td>
+               </tr>
+              <?php } ?>
+            </table>
+         </td>
+       </tr>
+       <tr>
+         <td>[注] 删除采集节点前请先在这里解除绑定</td>
+       </tr>
+   	</table>
+  </div>
+</div>
+<table width="100%" border="0" cellspacing="0" cellpadding="0"> 
+   <tr align="center">
+     <td colspan="2">
+     <hr/>
+     <input type="submit" name="Submit" value="保存" style="width:80px"/>
+     <input type="reset" name="button" value="重置" style="width:80px"/>
+     <div style="color:red;" class="unsave">&nbsp;</div>
+     </td>
+   </tr>
+</table>
+</form>

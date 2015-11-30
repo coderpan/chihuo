@@ -1,0 +1,1 @@
+<span>[field:typelink/]</span>|

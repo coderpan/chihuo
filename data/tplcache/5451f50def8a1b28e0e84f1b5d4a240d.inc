@@ -1,0 +1,1 @@
+{dede:charset}utf-8{/dede:charset}{dede:list}http://www.chinacaipu.com/menu/rouleishipu/index_[2-3].html{/dede:list}{dede:page}http://www.chinacaipu.com/menu/rouleishipu/(*).html{/dede:page}{dede:titlerule}{/dede:titlerule}{dede:authorrule}{/dede:authorrule}{dede:sourcerule}{/dede:sourcerule}{dede:bodyrule}{/dede:bodyrule}{dede:fyrule}{/dede:fyrule}

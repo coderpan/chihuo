@@ -1,0 +1,95 @@
+﻿@charset "utf-8";
+/*------------------
+Created:2013/10/30
+author:kingone
+-----------------*/
+/*css reset*/
+html{-webkit-font-smoothing:antialiased}
+body,h1,h2,h3,h4,h5,h6,p,dl,dt,dd,ul,ol,li,form,button,input,textarea,th,td{margin:0;padding:0}
+body,button,input,select,textarea{font:12px arial,\5b8b\4f53}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+address,cite,dfn,em,var,i{font-style:normal}
+code,kbd,pre,samp{font-family:arial,\5b8b\4f53}
+form{display:inline}
+small{font-size:12px}
+ul,ol{list-style:none}
+a{text-decoration:none;color:#333}
+a:hover{text-decoration:underline;color:#f60}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+img{vertical-align:top;border:0;-ms-interpolation-mode:bicubic}
+button,input,select,textarea{font-size:100%}
+table{border-collapse:collapse;border-spacing:0}
+input,button,select,textarea{outline:none}
+textarea{resize:none}
+/*common*/
+.hidden{display:none}
+.clearfix{zoom:1}
+.clearfix:after{content:'\20';display:block;height:0;clear:both}
+.w980,.nav,.navlist,.header{width:980px;margin:0 auto}
+.mt10{margin-top:10px}
+.mt20{margin-top:20px}
+.newico{background:url(img/icos.png) no-repeat}
+.searchbtn{background:url(img/btn.jpg) no-repeat}
+.logo{font: 0/0 a;overflow:hidden}
+.read,.more{color:#2C629E;display:inline-block}
+.read:hover,.more:hover{color:#f60}
+.more{float:right;width:45px;height:22px;line-height:22px;font-family:宋体;margin:10px 10px 0 0}
+
+/*begin*/
+
+.topbar{background:#EDEDED;height:30px;line-height:30px;border-bottom:1px solid #dfdfdf}
+.bar_l{float:left;height:30px}
+.bar_l span{float:left;padding:0 10px;cursor:pointer}
+.bar_l span:hover,.webmap:hover,.bar_menu li a:hover{background:#F5F5F5;color:#f60}
+.bar_r{float:right}
+.webmap{float:right;padding:0 10px}
+.webmap:hover,.bar_menu li a:hover{text-decoration:none}
+.bar_menu{float:right;width:100px;position:relative}
+.category{background:url(img/icos.png) no-repeat 80px 14px;display:block;text-indent:14px}
+.bar_menu:hover .category,.category:hover{background-color:#F5F5F5;text-decoration:none;color:#f60}
+.m_list{display:none;position:absolute;left:0;top:30px;width:100%}
+.m_list a{background:#fff;border-bottom:1px solid #E6E6E6;display:block;width:100px;height:28px;text-align:center}
+.m_list a:hover{background-color:#F5F5F5;color:#f60;text-decoration:none}
+.bar_menu:hover .m_list,.menu_cur .m_list{display:block}
+.ad960{width:960px;height:90px;overflow:hidden;margin:10px auto 0}
+
+
+/*header*/
+.header{height:75px;overflow:hidden}
+.logo,.logo a{float:left;width:190px;height:48px}
+.logo{background:url(img/logo.jpg) no-repeat;margin-top:15px}
+.search{float:right;width:353px;height:32px;margin-top:22px}
+.inputwrap{float:left;border:1px solid #E56825;height:30px;width:276px}
+.searchinput{padding:0 4px;width:268px;font-size:14px;height:16px;line-height:16px;border:0 none;margin-top:7px}
+.searchbtn{float:left;width:75px;height:32px;cursor:pointer;border:0 none}
+
+/*nav*/
+.navwrap{background:url(img/navbg.jpg) #EBEBEB repeat-x;}
+.nav{height:39px;position:relative}
+.lnav{float:left;height:36px}
+.lnav  .cur,.lnav  .cur i{background:url(img/navbtn.jpg) no-repeat}
+.lnav a{display:inline-block;height:36px;color:#fff;font:bold 14px/36px 宋体;padding-left:12px;*padding-left:11px;margin-right:3px;margin-top:3px}
+.lnav i{display:inline-block;height:36px;padding-right:16px;*padding-right:15px;background-position:100% 0;cursor:pointer}
+.lnav .cur{color:#f60;height:36px}
+.lnav .cur i{height:36px;background-position:100% 0}
+.lnav a:hover{text-decoration:none}
+.rnav{float:right;line-height:38px;margin-top:1px}
+.rnav a{color:#fff;margin:0 8px}
+.rnav a:hover{text-decoration:none;color:#fff}
+.newico{position:absolute;width:21px;height:12px;overflow:hidden;background-position:0 -50px;top:-4px;right:145px}
+.navlist{}
+.navlist li{color:#ccc;padding:5px 0;vertical-align:middle}
+.navlist li a{display:inline-block;color:#666;margin:3px 12px;padding:0 5px;height:20px;line-height:20px}
+.navlist li .hot{color:#f60}
+.navlist li a:hover{color:#f60;text-decoration:none;background:#D7D7D7;border-radius:3px}
+.navlist li a.current{color:#f60;text-decoration:none;background:#D7D7D7;border-radius:3px}
+
+/*footer*/
+.footer{margin-top:25px;padding:15px 0 20px 0;text-align:center;line-height:1.8;background:#585858;color:#ccc}
+.footer p,.footer a{color:#ccc}
+.footer a{margin:0 8px}
+
+
+
+

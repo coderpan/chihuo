@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>采集侠</title>
+<link href="<?php echo $css?>/base.css" rel="stylesheet" type="text/css">
+<link href="apps/CaiJiXia/style/cjx.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" id="cjxjq" src="<?php echo $cjxhost?>/Plugins/apps/CaiJiXia/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="apps/CaiJiXia/style/dialog.js"></script>
+<script type="text/javascript" src="apps/CaiJiXia/style/cjx.js"></script>
+</head>
+<body topmargin="8">
+<table width="98%"  border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D1DDAA">
+  <form name="form1" id="form1" action="###" method="post">
+    <tr> 
+      <td height="20" colspan="2" background="<?php echo $img?>/tbg.gif"> <b>&nbsp;采集侠 &gt; 搜索优化设置：</b> </td>
+    </tr>
+	
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">百度地图：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input type="radio" name="setting[kw_bdmap]" value="1" <?php if($kw_bdmap==1) echo 'checked';?>>是
+        <input name="setting[kw_bdmap]" type="radio" value="0" <?php if($kw_bdmap==0) echo 'checked';?>>否
+        <span style="color:#666">（开启后自动在网站根目录生成 <a href="../sitemap.html" target="_blank">sitemap.html</a>）</span>
+        </td>
+	</tr> 
+	
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">谷歌地图：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input type="radio" name="setting[kw_ggmap]" value="1" <?php if($kw_ggmap==1) echo 'checked';?>>是
+        <input name="setting[kw_ggmap]" type="radio" value="0" <?php if($kw_ggmap==0) echo 'checked';?>>否
+        <span style="color:#666">（开启后自动在网站根目录生成 <a href="../sitemap.xml" target="_blank">sitemap.xml</a>）</span>
+        </td>
+	</tr> 
+	
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">自动内链：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input type="radio" name="setting[kw_autolink]" value="1" <?php if($kw_autolink==1) echo 'checked';?>>是
+        <input name="setting[kw_autolink]" type="radio" value="0" <?php if($kw_autolink==0) echo 'checked';?>>否
+        <span style="color:#666">（推荐开启，对seo十分有利，对权重很有好处）</span>
+        </td>
+	</tr> 
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">seo词频率：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input name="setting[kw_seocount]" type="text" value="<?php echo $kw_seocount?>">
+        <span style="color:#666">（每篇文章随机插入seo词的数量）</span>
+        </td>
+	</tr>
+    
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">seo词语或链接</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        支持html，多个&lsquo;|&rsquo;分开<br>
+        例：<br>
+		&#60;a&nbsp;href="http://www.sina.com.cn"&#62;新浪&#60;/a&#62;<font color="red">|</font>&#60;a&nbsp;href="http://www.dedecms.com"&#62;dedecms&#60;/a&#62; <br>
+      <textarea name="setting[kw_seoword]" cols="100" rows="6"><?php echo $kw_seoword?></textarea></td>
+    </tr>
+    
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">关键词内链</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        采集回来的文章内包含下列关键词将自动添加链接，最大添加次数在 系统配置参数-其它选项 里设置<br>
+        例：<br>
+        网易|http://www.163.com<br>
+        百度|http://www.baidu.com<br>
+        腾讯|http://www.qq.com<br>
+      <textarea name="setting[kw_relalink]" cols="100" rows="10"><?php echo $kw_relalink?></textarea></td>
+    </tr>
+    
+    <tr bgcolor="#F9FDF0"> 
+      <td height="28" colspan="2">
+      	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="26%">&nbsp;</td>
+            <td width="15%"><input name="imageField" class="np" type="image" src="<?php echo $img?>/button_ok.gif" width="60" height="22" border="0"></td>
+            <td width="59%"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </form>
+</table>
+<div id="footer" style="text-align:center; padding:10px;"></div>
+<script type="text/javascript">$(function(){$.getScript("http://www.yikenw.com/ad/dedecjx_footer.js");})</script>
+</body>
+</html>

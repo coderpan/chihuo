@@ -1,0 +1,3 @@
+{dede:charset}utf-8{/dede:charset}{dede:list}http://www.chinacaipu.com/menu/danleishipu/index_2.html{/dede:list}{dede:page}http://www.chinacaipu.com/menu/danleishipu/(*).html{/dede:page}{dede:titlerule}<h1 class="contit">[内容]</h1>{/dede:titlerule}{dede:authorrule}{/dede:authorrule}{dede:sourcerule}{/dede:sourcerule}{dede:bodyrule}<div class="content">[内容]</div>{/dede:bodyrule}{dede:fyrule}<u></u>1</span>[内容]<u></u>下一页</a>
+        </div>
+        <script src='http://www.chinacaipu.com/ad/ad_nei_baidu_640X90.js'></script>{/dede:fyrule}

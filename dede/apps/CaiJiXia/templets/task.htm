@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>采集侠</title>
+<link href="<?php echo $css?>/base.css" rel="stylesheet" type="text/css">
+<link href="apps/CaiJiXia/style/cjx.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" id="cjxjq" src="<?php echo $cjxhost?>/Plugins/apps/CaiJiXia/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="apps/CaiJiXia/style/dialog.js"></script>
+<script type="text/javascript" src="apps/CaiJiXia/style/cjx.js"></script>
+<script type="text/javascript">
+$(function(){
+	$.getScript("http://www.dedeapps.com/dedecjx_news.js",function(){
+		$(".cjxnew").fadeIn("slow");
+	});
+})
+</script>
+</head>
+<body leftmargin='8' topmargin='8'>
+<table width="98%" border="0" cellpadding="3" cellspacing="1" bgcolor="#D1DDAA" align="center" class="cjxnew" style="display:none;">
+	<tr bgcolor="#FCFE9C">
+		<th align="left">滚动公告：
+		<marquee style="width:600px;height:18px" scrollamount="1" direction="up" >
+		<span id="cjxnew"></span>
+		</marquee >
+		</th>
+	</tr>
+</table>
+<div style="height:5px; line-height:5px;"></div>
+<form name="status" action="?ac=status" target="_self" method="post">
+	<input name="type" type="hidden" value="">
+<table width="98%" border="0" cellpadding="3" cellspacing="1" bgcolor="#D1DDAA" align="center">
+  <tr> 
+    <td height="20" colspan="6" background='<?php echo $img?>/tbg.gif'> <table width="100%" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td>
+          <div style="float:right">
+          <b><a href="javascript:void(0)" onClick="$.dialog({title:'关键词工具 <b><a href=http://www.dedeadmin.com/?p=1642 target=_blank><font color=red>选取建议</font></a></b>',content:'http://www.dedeapps.com/?m=keyword&type=iframe',width:'100%',height:'100%'});"><font color="red">关键词工具</font></a></b>
+          <a href="?ac=testhttp">[测试]</a> 
+          <a href="?ac=delcache" onclick="return confirm('清除已经采集的url缓存记录则这些页面将不会再被采集，只有在您删除采集项目后程序还继续采集才需要使用该功能，您确定要清除吗？')">[清除缓存]</a> 
+          <a href="?ac=delhash" onClick="return confirm('清除已经采集过的url记录会导致下次采集到相同的url时需要再次检测文章是否存在，严重降低采集效率，您确定要清除吗？')">[清除历史记录]</a> 
+		  &nbsp;&nbsp;
+          </div>
+          <strong>&nbsp;采集任务：(仅支持 普通文章 模型的栏目)</strong></td>
+        </tr>
+      </table></td>
+  </tr>
+  <tr align="center" bgcolor="#FAFAF1">
+  	<td width="8%">选择</td>
+    <td width="5%">栏目id</td>
+    <td width="15%">栏目名称</td>
+    <td width="10%">是否开启</td>
+    <td width="50%">采集目标 【<a href="?ac=clearall" onClick="return confirm('你确定要清空所有栏目采集项目吗');" style="text-decoration:underline;">清空</a>】</td>
+	<td width="8%">每小时采集数量</td>
+  </tr>
+<?php
+if(empty($kwtype))
+{
+?>
+<tr><td colspan="6" bgcolor="#FFFFFF"><b><font color="red"> 无法找到 文章模型 的栏目，请您先添加栏目</font></b></td></tr>
+<?php
+} else foreach($kwtype as $id => $typename) {
+?>
+    <tr bgcolor="#FFFFFF" align="center">
+      <td align="center"><input name="tid[]" value="<?php echo $kwtype[$id]['id']?>" type="checkbox"></td>
+      <td><?php echo $kwtype[$id]['id']?></td>
+      <td><a href="../plus/list.php?tid=<?php echo $kwtype[$id]['id']?>" target="_blank"><?php echo $kwtype[$id]['typename']?></a></td>
+      <td>
+	  <?php
+	  	if(!empty($kwtype[$id]['keyword'])){
+	  ?>
+	  <a href="?ac=status&type=<?php echo $kwtype[$id]['close']?>&tid=<?php echo $kwtype[$id]['id']?>"><strong><?php echo $kwtype[$id]['close']==1?'<font color=red>已关闭</font>':'已开启';?></strong></a>
+	  <?php } else { ?>
+	  无关键词
+	  <?php } ?>
+	  </td>
+      <td align="left">关键词：<?php echo $kwtype[$id]['keyword']?>
+	  <a href="javascript:void(0)" onClick="Showdialog(<?php echo $kwtype[$id]['id']?>,<?php echo $kwtype[$id]['close']?>);"><b>[设置]</b></a>
+	  <a href="?ac=export&id=<?php echo $kwtype[$id]['id']?>" target="_blank"><b>[导出]</b></a>
+	  <a href="?ac=import&id=<?php echo $kwtype[$id]['id']?>"><b>[导入]</b></a>
+	  
+	  </td>
+	  <td><input name="tmax[<?php echo $kwtype[$id]['id']?>]" type="text" style="width:30px; text-align:center" value="<?php echo isset($tmax[$kwtype[$id]['id']])?$tmax[$kwtype[$id]['id']]:100; ?>"></td>
+    </tr>
+<?php
+}
+?>
+  <tr bgcolor="#FAFAF1"> 
+    <td height="24" colspan="6"> 
+      <table width="98%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td>
+		  <input name="updatemax" type="submit" id="updatemax" style="float:right;" value="更新采集数量">
+          	<a href="javascript:void(0)" class="coolbg" onClick='selall();' >全选</a>
+			<a href="javascript:void(0)" class="coolbg" onClick="noselall();" >取消</a>
+            <a href="javascript:void(0)" class="coolbg" onClick="closeall();">关闭</a>
+            <a href="javascript:void(0)" class="coolbg" onClick="openall();">开启</a>
+			<a href="javascript:void(0)" class="coolbg" onClick="coone();">采集单个栏目</a>
+<script type="text/javascript">
+function selall(){
+	$("input[name='tid\[\]']").attr('checked','checked');
+}
+function noselall(){
+	$("input[name='tid\[\]']").attr('checked',false);
+}
+function closeall(){
+	$("input[name='type']").val(0);
+	$('form[name=\'status\']').submit();	
+}
+function openall(){
+	$("input[name='type']").val(1);
+	$('form[name=\'status\']').submit();
+}
+function coone(){
+	var d = [];
+	$("input[name='tid\[\]']:checked").each(function(){
+		d.push($(this).val());
+	});
+	if(d.length==0){
+		$.dialog({title:null,content:"请您先选择要采集的栏目！",time:2000});
+		return false;
+	}
+	if(d.length>1){
+		$.dialog({title:null,content:"一次只能选择一个栏目！",time:2000});
+		return false;
+	}
+	if(d.length==1) statask(d[0]);
+}
+</script>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+    <tr bgcolor="#FAFAF1">
+      <td height="50px" colspan="6">
+        &nbsp; <a href="javascript:void(0)" onClick="statask();" class='coolbg np' id="stainput" alt="0" style="border:solid 1px gray;padding:5px;"> 立即采集 </a>
+        &nbsp;（立即采集是为新站快速获取文章和模块测试准备的，需要快速完成每日采集任务也可运行立即采集）
+      </td>
+    </tr>
+</table>
+</form>
+<br>
+<div id="if">
+  <form action="?ac=cron" method="post">
+    <table width="98%" border="0" cellpadding="3" cellspacing="1" bgcolor="#D1DDAA" align="center">
+      <tr> 
+        <td height="20" colspan="3" background='<?php echo $img?>/tbg.gif'>
+          <table width="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr> 
+              <td><strong>&nbsp;自动采集：</strong>（设置采集侠可以运行的时间段,全部为空即全天监测任务，采集上限请在 <a href="?ac=setting" style="text-decoration:underline;">基本设置</a> 里设置）</td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr bgcolor="#FAFAF1"> 
+        <td width="7%" colspan="3">
+          <div style="padding:10px">
+          <?php for($i=0;$i<=23;$i++){ ?>
+            <input name="cron[<?php echo $i ?>]" type="checkbox" value="<?php echo $i ?>" <?php echo empty($cron)||isset($cron[$i])?'checked':'';?>><?php echo $i ?>点
+            <?php if($i==12) echo "<br>" ?>
+          <?php } ?>
+        </div></td>
+      </tr>
+      <tr bgcolor="#FAFAF1"> 
+        <td height="24" colspan="3"> 
+          <table width="90%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td align="center">
+                <input name="" type="submit" value="保存设置">
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      <tr bgcolor="#FAFAF1"> 
+        <td height="24" colspan="3"> 
+          <table border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td>
+                <strong><img src="<?php echo $img?>/help.gif">自动采集说明：</strong><br>
+                自动采集时间段设置只是程序可以运行的时间，实际运行还依靠用户访问网站js触发或者由采集侠官方提供触发服务。<br>
+                方式一、在页脚模板内添加标签
+                    {dede:robot copyright="qjpemail"/}，如果您使用默认模板，
+                    请修改该文件：./templets/default/footer.htm，
+                    只要整个网站有一个页面是打开状态，程序即可持续循环工作，不影响网站打开速度。<br>
+                方式二、采集侠官方对商业版提供采集触发服务，
+                	采集侠官方服务器定时稳定地通过http协议触发客户端的采集侠运行，
+                   	可以达到精准的定时采集，而且不用在网页内添加js代码，需要该服务需要自行和客服说明。<br>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+<div id="footer" style="text-align:center; padding:10px;"></div>
+<script type="text/javascript">$(function(){$.getScript("http://www.yikenw.com/ad/dedecjx_footer.js");})</script>
+</body>
+</html>

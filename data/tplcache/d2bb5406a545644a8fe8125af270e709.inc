@@ -1,0 +1,1 @@
+<span>[field:typelink/]</span>| {dede:arclist typeid=2 row=12  channelid=1  col='2' titlelen=20  orderby='pubdate' }<a href='[field:arcurl/]'>[field:title/]</a>  <br/>

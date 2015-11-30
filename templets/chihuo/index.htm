@@ -1,0 +1,1696 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<title>{dede:global.cfg_webname/} - 幸福从吃开始</title>
+<meta name="keywords" content="吃货网,吃货,美食,美食推荐,美食网,美食网购,美食故事,菜谱大全" />
+<meta name="description" content="吃货网是一个美食分享平台,它是一个由吃货们介绍美食制作方法的地方,有她们关于美食的故事分享,还可以搜罗吃货们网购所带来的幸福味道哦,一切幸福都是从吃开始的，让生活更精彩!" />
+<link href="{dede:field name='templeturl'/}/style/css/common.css" rel="stylesheet">
+<link href="{dede:field name='templeturl'/}/style/css/index.css" rel="stylesheet">
+<script src="{dede:field name='templeturl'/}/style/js/jquery1.8.3.min.js" charset="utf-8"></script>
+<base target="_blank">
+<div class="topbar">
+    <div class="w980">
+        {dede:include filename="head.htm"/}
+<div class="focus clearfix">
+    <div class="focuspic mt20" id="focuspic">
+        <ul class="JQ-content">
+
+     {dede:arclist flag='f' row=6 orderby=pubdate type='image.'}
+
+        <li><a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}
+
+                    </ul>
+        <div class="JQ-navwrap">
+            <ul class="JQ-nav">   {dede:arclist flag='f' row=6 orderby=pubdate type='image.'}
+                                <li class="on"><a href="[field:arcurl/]">[field:image/]</a>{/dede:arclist}
+                            </ul>
+        </div>
+    </div>
+
+    <div class="w380 mt20">
+
+        <div class="jrcp"><h2>今日菜谱推荐</h2></div>
+
+        <div class="cptj_l" id="cptj_l">
+
+                                                <h3 class="cptj_tit">{dede:arclist flag='h' typeid='1' limit='0,1' titlelen='30'}	     
+
+        <a href="[field:arcurl/]" target="_blank" title="[field:fulltitle/]">[field:title/]</a>     
+
+		{/dede:arclist}</h3>
+
+                <p class="cptj_hot">
+
+                                       {dede:arclist typeid='1,2' flag='c' limit='1,3' titlelen='20'}	     
+
+        <a href="[field:arcurl/]" target="_blank" title="[field:fulltitle/]">[[field:title/]]</a>     
+
+		{/dede:arclist}    
+
+                                     </p>
+
+                <p class="cptj_info">
+
+         {dede:arclist typeid='1,2' row='1' flag='p,c' channelid='1' addfields='body' titlelen='44'}	     
+
+       <a href="[field:arcurl/]" title="[field:fulltitle/]"><img src="[field:litpic/]" width="130" height="90" alt="[field:fulltitle/]" /><span>[field:title/]</span><cite>[field:body function='cn_substr(html2text(@me),160)'/]…[全文]</cite></a> 
+
+		{/dede:arclist} 
+
+                </p>
+
+                                <div class="cptj">
+
+                    <p class="w400">
+
+                         {dede:arclist  typeid='1,2' row='6' col='3'  channelid='1' flag='c' orderby=pubdate}
+
+        <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}
+
+                                            </p>
+
+                </div>
+
+        </div>
+
+    </div>
+
+    <div class="w230 mt20">
+
+        <div class="w230_t">
+
+            <h2>养生热文</h2>
+
+        </div>
+
+        <div class="w230_c">
+
+                                                <div class="h80">
+
+               {dede:arclist typeid=10 row=1 titlelen=20  flag ='c' infolen=50 limit='0,1' type='image.'}
+
+[field:imglink/]
+
+<h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>  [field:info/]</p>
+
+{/dede:arclist}
+
+            </div>
+    <div class="h80">
+
+               {dede:arclist typeid=10 row=1 titlelen=20  flag ='c'  infolen=50  limit='1,1' type='image.'}
+
+[field:imglink/]
+
+<h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>  [field:info/]</p>
+
+{/dede:arclist}
+
+            </div>
+                                    <ul class="yslist">
+
+                            {dede:arclist typeid=10 row=8 channelid=1 col=1 titlelen=20 orderby='pubdate' }
+
+<li>
+
+<span>[field:typelink/]</span>|<a href='[field:arcurl/]'>[field:title/]</a>  <br/>
+
+
+
+{/dede:arclist}
+
+
+                        </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="w980t mt20"><h2>最新发布的菜谱</h2></div>
+
+<div class="zxfb" id="zxfb">
+
+  <div class="wrap">
+
+        <ul class="JQ-content">
+
+                  {dede:arclist typeid=1,2,3,4 row=10 orderby=pubdate type='image.'}
+
+        <li><a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a></li>
+
+        {/dede:arclist}
+
+                </ul>
+
+  </div>
+
+  <div class="JQ-nav"> <a style="cursor:pointer;" class="prev"></a> <a style="cursor:pointer;" class="next"></a> </div>
+
+</div>
+
+<div class="w980 clearfix">
+
+    <div class="w640">
+
+        <div class="w640t"><h2>编辑推荐菜谱</h2></div>
+
+        <div class="img90">
+
+            <p>
+
+                       {dede:arclist typeid=1,2 row=12  col='6' orderby=pubdate type='image.'}
+
+        <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}
+
+                        </p>
+
+        </div>
+
+    </div>
+
+    <div class="w318">
+
+        <div class="w318t">
+
+            <h2>菜谱导航</h2>
+
+        </div>
+
+        <p class="subnav">
+
+            <em>推荐专题菜谱</em>
+
+                {dede:channel type='son' typeid ='11' row ='10'}
+
+<a href='[field:typelink/]'>[field:typename/]</a> 
+
+{/dede:channel}
+
+                    </p>
+
+        <p class="subnav">
+
+            <em>新增专题菜谱</em>
+
+                        {dede:channel type='son' typeid ='22' row ='15'}
+
+<a href='[field:typelink/]'>[field:typename/]</a> 
+
+{/dede:channel}
+
+                    </p>
+
+        <p class="subnav">
+
+            <em>新增菜谱原料</em>
+
+                         {dede:channel type='son' typeid ='23' row ='15'}
+
+<a href='[field:typelink/]'>[field:typename/]</a> 
+
+{/dede:channel}
+
+                    </p>
+
+    </div>
+
+</div>
+
+<div class="ad960"><script src='/plus/ad_js.php?aid=21' language='javascript'></script></div>
+
+<div class="w980 clearfix">
+
+    <div class="w730 clearfix">
+
+        <div class="w730t"><h2>家常菜谱</h2><a class="more" href="/jiachangshipu/">更多>></a></div>
+
+        <ul class="w330">
+                 
+
+            {dede:arclist typeid=1 row=3 titlelen=20 infolen=120 flag ='h' orderby='pubdate' }
+
+<li>[field:imglink/]
+
+ <h3><a href="[field:filename/]">[field:title/]</a></h3>
+
+<p>[field:info/]</p>
+
+{/dede:arclist}
+
+            </li>
+
+
+                    </ul>
+
+        <div class="img80r w400r">
+
+                          {dede:arclist typeid=1 row=12  col='4' orderby=pubdate type='image.'}
+
+        <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}
+
+                    </div>
+
+    </div>
+
+    <div class="w228">
+
+        <div class="w228t">
+
+            <h2>家常菜谱排行</h2>
+
+            <ul class="ranktab" id="tab1">
+
+                <li class="cur">今日
+
+                <li>本周
+
+                <li>本月
+
+            </ul>
+
+        </div>
+
+        <div class="ranklist" id="tablist1">
+
+            <ol>
+
+                               <li class="li_cur">
+
+                    <span class="i1">1</span>
+
+<div class="img64 hidden">
+
+ {dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='0,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>
+{/dede:arclist}
+                                <li >
+
+                    <span class="i2">2</span>
+
+<div class="img64 hidden">
+
+ {dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='1,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i3">3</span>
+
+<div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='2,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i4">4</span>
+               
+  <div class="img64 hidden">
+
+ {dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='3,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i5">5</span>
+
+ <div class="img64 hidden">
+
+ {dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='4,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i6">6</span>
+
+                <div class="img64 hidden">
+
+ {dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='5,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+ 
+
+                                <li >
+
+                    <span class="i7">7</span>
+
+<div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='6,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i8">8</span>
+
+ <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='7,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}              
+
+                                <li >
+
+                    <span class="i9">9</span>
+
+<div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='8,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i10">10</span>
+
+<div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='9,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+                            </ol>
+
+            <ol class="hidden">
+
+                                 <li class="li_cur">
+
+                    <span class="i1">1</span>
+
+       <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='10,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i2">2</span>
+
+                   <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='11,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i3">3</span>
+
+                 <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='12,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i4">4</span>
+
+                <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='13,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i5">5</span>
+
+                <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='14,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i6">6</span>
+
+                  <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='15,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i7">7</span>
+
+                 <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='16,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+                                <li >
+
+                    <span class="i8">8</span>
+
+                  <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='17,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i9">9</span>
+
+                   <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='18,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i10">10</span>
+
+                     <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='19,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                            </ol>  
+
+            <ol class="hidden">
+
+                                 <li class="li_cur">
+
+                    <span class="i1">1</span>
+
+                    <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='20,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i2">2</span>
+
+                     <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='21,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i3">3</span>
+
+                    <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='22,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i4">4</span>
+
+                    <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='23,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i5">5</span>
+
+                     <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='24,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i6">6</span>
+
+                   <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='25,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i7">7</span>
+
+                   <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='26,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i8">8</span>
+
+                     <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='27,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i9">9</span>
+
+                     <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='28,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i10">10</span>
+
+                     <div class="img64 hidden">
+
+{dede:arclist typeid=1 row=1 titlelen=20 infolen=80 flag ='p' limit='29,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                            </ol>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="w980 clearfix">
+
+    <div class="w730 clearfix">
+
+        <div class="w730t"><h2>中国菜谱</h2><a class="more" href="/zhongguoshipu/">更多>></a></div>
+
+      <ul class="w330">
+
+            {dede:arclist typeid=2 row=3 titlelen=20 infolen=120 flag ='h' orderby='pubdate' }
+  <li>
+[field:imglink/]
+
+ <h3><a href="[field:filename/]">[field:title/]</a></h3>
+
+<p>[field:info/]</p>
+
+{/dede:arclist}
+
+            </li>
+
+                    </ul>
+
+       <div class="img80r w400r">
+
+                          {dede:arclist typeid=2 row=12  col='4' orderby=pubdate type='image.'}
+
+        <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}
+
+                    </div>
+
+    </div>
+
+    <div class="w228">
+
+        <div class="w228t">
+
+            <h2>中国菜谱排行</h2>
+
+            <ul class="ranktab" id="tab2">
+
+                <li class="cur">今日
+
+                <li>本周
+
+                <li>本月
+
+            </ul>
+
+        </div>
+
+        <div class="ranklist" id="tablist2">
+
+            <ol>
+
+                                 <li class="li_cur">
+
+                   <span class="i1">1</span>
+
+<div class="img64 hidden">
+
+ {dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='0,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>
+{/dede:arclist}
+                                <li >
+
+                    <span class="i2">2</span>
+
+<div class="img64 hidden">
+
+ {dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='1,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i3">3</span>
+
+<div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='2,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i4">4</span>
+               
+  <div class="img64 hidden">
+
+ {dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='3,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i5">5</span>
+
+ <div class="img64 hidden">
+
+ {dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='4,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i6">6</span>
+
+                <div class="img64 hidden">
+
+ {dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='5,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+ 
+
+                                <li >
+
+                    <span class="i7">7</span>
+
+<div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='6,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i8">8</span>
+
+ <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='7,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}              
+
+                                <li >
+
+                    <span class="i9">9</span>
+
+<div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='8,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i10">10</span>
+
+<div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='9,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+                            </ol>
+
+            <ol class="hidden">
+
+                                 <li class="li_cur">
+
+                    <span class="i1">1</span>
+
+       <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='10,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i2">2</span>
+
+                   <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='11,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i3">3</span>
+
+                 <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='12,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i4">4</span>
+
+                <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='13,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i5">5</span>
+
+                <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='14,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i6">6</span>
+
+                  <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='15,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i7">7</span>
+
+                 <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='16,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+                                <li >
+
+                    <span class="i8">8</span>
+
+                  <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='17,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i9">9</span>
+
+                   <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='18,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i10">10</span>
+
+                     <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='19,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                            </ol>  
+
+            <ol class="hidden">
+
+                                 <li class="li_cur">
+
+                     <span class="i1">1</span>
+
+                    <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='20,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i2">2</span>
+
+                     <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='21,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i3">3</span>
+
+                    <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='22,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i4">4</span>
+
+                    <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='23,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i5">5</span>
+
+                     <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='24,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i6">6</span>
+
+                   <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='25,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i7">7</span>
+
+                   <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='26,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i8">8</span>
+
+                     <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='27,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i9">9</span>
+
+                     <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='28,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                                <li >
+
+                    <span class="i10">10</span>
+
+                     <div class="img64 hidden">
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=80 flag ='p' limit='29,1' orderby='pubdate' }
+
+[field:imglink/]</div>
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>{/dede:arclist}
+
+                            </ol>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="w980 clearfix">
+
+    <div class="w330b">
+
+        <div class="w330t"><h2>饮食健康</h2><a class="more" href="/jiankangyangsheng/">更多>></a></div>
+
+                        <div class="h75">
+
+         {dede:arclist typeid=10 row=1 titlelen=20 infolen=120 flag ='c' limit='0,1' orderby='pubdate'  type='image.'}
+
+[field:imglink/]
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>
+
+{/dede:arclist}</p>
+
+        </div>
+
+                <ul class="newlist">
+
+                                    
+
+                            {dede:arclist typeid=10 row=10 col='2' titlelen=26   orderby='pubdate' }
+
+<li>
+
+<a href='[field:arcurl/]'>[field:title/]</a>  <br/>
+
+
+
+{/dede:arclist} </li>
+
+                    </ul>
+
+        <div class="w330t"><h2>亲子频道</h2><a class="more" href="/qinzipindao/">更多>></a></div>
+
+                        <div class="h75">
+
+       {dede:arclist typeid=8 row=1 titlelen=20 infolen=120 flag ='h' limit='0,1' orderby='pubdate' }
+
+[field:imglink/]
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>
+
+{/dede:arclist}</p>
+
+        </div>
+
+                <ul class="newlist">
+
+                                 
+
+                    {dede:arclist typeid=8 row=8 col='2' titlelen=26   orderby='pubdate' }
+
+   <li>
+
+<a href='[field:arcurl/]'>[field:title/]</a>  <br/>
+
+{/dede:arclist} </li>
+          
+                    </ul>
+
+    </div>
+
+    <div class="w380">
+
+        <div class="w380t"><h2>快乐厨房</h2><a class="more" href="/kuailechufang/">更多>></a></div>
+
+                        <div class="h75">
+
+ {dede:arclist typeid=9 row=1 titlelen=20 infolen=120 flag ='h' limit='0,1' orderby='pubdate' }
+
+[field:imglink/]
+
+ <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+<p>[field:info/]</p>
+
+{/dede:arclist}</p>
+
+        </div>
+
+                <ul class="newlist">
+
+                              {dede:arclist typeid=9 row=9 channelid=1 col=3 titlelen=18 orderby='pubdate' } <li>
+<span></span><a href='[field:arcurl/]'>[field:title/]</a>  <br/>{/dede:arclist} </li>
+
+                </ul>
+
+        <div class="w240">
+
+            <div class="w240t clearfix"><h2>烹饪技巧</h2></div>
+
+            <ol>
+
+                            {dede:arclist row="10" typeid="109" titlelen="16"}
+<li><a href="[field:arcurl /]">[field:title /]</a></li>
+{/dede:arclist}
+                        </ol>
+
+        </div>
+
+        <div class="w128">
+
+            <h2>美食DIY</h2>
+
+                        <div class="h125">
+<div class="pic">
+              {dede:arclist typeid="108" titlelen="10"  row=1  col='1' limit='0,1'  orderby='pubdate' type='image.'}
+
+        <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}</div>
+
+<div class="showbtn">
+
+ {dede:arclist typeid="108" titlelen="10"  row=1  col='1' limit='0,1'  orderby='pubdate' type='image.'}
+<a href='[field:arcurl/]'>查看内容</a>  <br/>{/dede:arclist}
+</div></div>
+                        <div class="h125">
+
+<div class="pic">
+              {dede:arclist titlelen="10" row=1 typeid="108"  col='1' limit='1,1' orderby='pubdate' type='image.'}
+
+        <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}</div>
+
+     <div class="showbtn">
+
+  {dede:arclist titlelen="10" row=1 typeid="108"  col='1' limit='1,1' orderby='pubdate' type='image.'}
+<a href='[field:arcurl/]'>查看内容</a>  <br/>{/dede:arclist} </div>
+
+            </div>
+
+                    </div>
+
+    </div>
+
+    <div class="w230b">
+
+        <div class="w228b">
+
+            <div class="w228bt clearfix" id="rdtab"><span class="cur">饮食热点</span><span>菜谱热点</span>
+
+            </div>
+
+            <div id="rdlist">
+
+                <div>
+<div class="img210"> 
+                                                          {dede:arclist typeid="97" titlelen="10"  row=1  col='1'  flag ='h' orderby='pubdate'}
+
+        <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}</div>
+                                        <ul class="redian clearfix">
+
+                            {dede:arclist typeid=97 row=12 col='2'  titlelen=24  orderby='pubdate' } <li>
+
+<a href='[field:arcurl/]'>[field:title/]</a>  <br/>
+
+{/dede:arclist}
+
+                                        </ul>
+
+                    <div class="rdpic clearfix">
+
+                        <p>
+
+                                                {dede:arclist typeid=99 row=4  col='2' orderby=pubdate type='image.'}
+
+        <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}
+
+                                                 </p>
+
+                    </div>
+
+                </div>
+
+                <div class="hidden">
+
+                                                          <div class="img210"> 
+                                                          {dede:arclist typeid="99" titlelen="10"  row=1  col='1'  flag ='c' orderby='pubdate'}
+
+        <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}</div>
+
+                                        <ul class="redian clearfix">
+                  
+                            {dede:arclist typeid=99 row=12 col='2'  titlelen=24   orderby='pubdate' }
+ <li>
+<a href='[field:arcurl/]'>[field:title/]</a>  <br/>
+
+{/dede:arclist}
+
+                                        </ul>
+
+                    <div class="rdpic clearfix">
+
+                        <p>
+
+                                                  {dede:arclist typeid=98 row=4  col='2' orderby=pubdate type='image.'}
+
+        <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}
+                                                 </p>
+
+                    </div>
+
+                </div>
+
+            </div>  
+
+        </div>
+
+       
+
+    </div>
+
+</div>
+
+<div class="w980t mt20"><h2>图说饮食</h2></div>
+
+<ul class="w980 tsys" id="j_pic">
+
+        <li class="p1"> {dede:arclist typeid=1 row=1  limit='0,1' orderby=pubdate type='image.'}
+
+        <a href="[field:arcurl/]">[field:image/]
+
+        <i>[field:title/]</i></a>{/dede:arclist}
+
+        <li class="p2">
+
+  {dede:arclist typeid=1 row=1  limit='1,1' orderby=pubdate type='image.'}
+
+ <a href="[field:arcurl/]">[field:image/] <i>[field:title/]</i></a>{/dede:arclist}
+
+        <li class="p3"> {dede:arclist typeid=1 row=1 limit='3,1' orderby=pubdate type='image.'}
+
+        <a href="[field:arcurl/]">[field:image/]
+
+        <i>[field:title/]</i></a>{/dede:arclist}
+
+        <li class="p4"> {dede:arclist typeid=1 row=1 limit='4,1' orderby=pubdate type='image.'} <a href="[field:arcurl/]">[field:image/]<i>[field:title/]</i></a>{/dede:arclist}
+
+        <li class="p5">{dede:arclist typeid=2 row=1 limit='0,1' orderby=pubdate type='image.'} <a href="[field:arcurl/]">[field:image/]<i>[field:title/]</i></a>{/dede:arclist}
+
+        <li class="p6">{dede:arclist typeid=2 row=1 limit='1,1' orderby=pubdate type='image.'} <a href="[field:arcurl/]">[field:image/]<i>[field:title/]</i></a>{/dede:arclist}
+
+        <li class="p7">{dede:arclist typeid=2 row=1 limit='2,1' orderby=pubdate type='image.'} <a href="[field:arcurl/]">[field:image/]<i>[field:title/]</i></a>{/dede:arclist}
+
+        <li class="p8">{dede:arclist typeid=2 row=1 limit='3,1' orderby=pubdate type='image.'} <a href="[field:arcurl/]">[field:image/]<i>[field:title/]</i></a>{/dede:arclist}
+
+        <li class="p9">{dede:arclist typeid=2 row=1  limit='4,1' orderby=pubdate type='image.'} <a href="[field:arcurl/]">[field:image/]<i>[field:title/]</i></a>{/dede:arclist}
+
+    </ul>
+
+<div class="w980t mt20"><h2>健康养生</h2>
+
+    <div class="tip"><a href="/jiankangyangsheng/01/">中医养生</a>|<a href="/jiankangyangsheng/03/">运动养生</a>|<a href="/jiankangyangsheng/02/">饮食养生</a>|<a href="/jiankangyangsheng/04/">人群养生</a></div>
+
+</div>
+
+<div class="w980 clearfix">
+
+    <div class="w330b">
+
+        <div class="w330bt"><h2>中医养生</h2><a href="/jiankangyangsheng/01" class="more">更多>></a></div>
+
+                <div class="h126">
+
+         <div class="hot">                
+ {dede:arclist typeid=113 row=1 titlelen=20 infolen=120 flag ='h,p' limit='0,1' orderby='pubdate' }
+
+[field:imglink/]{/dede:arclist}</div>
+
+                        <ul class="slist">
+
+                            {dede:arclist typeid=113 flag ='c' row=5 col='1' titlelen=36 orderby='pubdate' }
+
+<li><a href='[field:arcurl/]'>[field:title/]</a>  <br/>
+
+{/dede:arclist}
+
+                        </ul>
+
+        </div>
+
+        <ul class="newlist">
+
+  {dede:arclist typeid=113 row=6 col='1' titlelen=44 orderby='pubdate' }
+
+                    <li><a href='[field:arcurl/]'>[field:title/]</a> 
+{/dede:arclist}
+                 
+
+                </ul>
+
+
+
+        <div class="w330bt"><h2>运动养生</h2><a href="/jiankangyangsheng/03" class="more">更多>></a></div>
+
+                <div class="h126">
+
+    <div class="hot">                
+ {dede:arclist typeid=115 row=1 titlelen=20 infolen=120 flag ='h,p' limit='0,1' orderby='pubdate' }
+
+[field:imglink/]{/dede:arclist}</div>
+
+                        <ul class="slist">
+
+                            {dede:arclist typeid=115 flag ='c' row=5 col='1' titlelen=36 orderby='pubdate' }
+
+<li><a href='[field:arcurl/]'>[field:title/]</a>  <br/>
+
+{/dede:arclist}
+
+                        </ul>
+
+        </div>
+
+        <ul class="newlist">
+
+                  {dede:arclist typeid=115 row=6 col='1' titlelen=44 orderby='pubdate' }
+
+                    <li><a href='[field:arcurl/]'>[field:title/]</a> 
+{/dede:arclist}
+                </ul>
+
+    </div>
+
+    <div class="w380b">
+
+        <div class="w330bt"><h2>饮食养生</h2><a href="/jiankangyangsheng/02" class="more">更多>></a></div>
+
+                <div class="h126">
+
+                        <div class="hot">                
+ {dede:arclist typeid=114 row=1 titlelen=20 infolen=120 flag ='h,p' limit='0,1' orderby='pubdate' }
+
+[field:imglink/]{/dede:arclist}</div>
+
+                        <ul class="slist">
+
+                           {dede:arclist typeid=114 flag ='c' row=5 col='1' titlelen=36 orderby='pubdate' }
+
+<li><a href='[field:arcurl/]'>[field:title/]</a>  <br/>
+
+{/dede:arclist}
+
+
+                        </ul>
+
+        </div>
+
+        <ul class="newlist">
+
+                 {dede:arclist typeid=114 row=6 col='1' titlelen=44 orderby='pubdate' }
+
+                    <li><a href='[field:arcurl/]'>[field:title/]</a> 
+{/dede:arclist}
+                </ul>
+
+
+
+        <div class="w330bt"><h2>疾病预防</h2><a href="/jiankangyangsheng/05" class="more">更多>></a></div>
+
+                <div class="h126">
+
+                         <div class="hot">                
+ {dede:arclist typeid=117 row=1 titlelen=20 infolen=120 flag ='h,p' limit='0,1' orderby='pubdate' }
+
+[field:imglink/]{/dede:arclist}</div>
+
+                        <ul class="slist">
+
+                           {dede:arclist typeid=117 flag ='c' row=5 col='1' titlelen=36 orderby='pubdate' }
+
+<li><a href='[field:arcurl/]'>[field:title/]</a>  <br/>
+
+{/dede:arclist}
+
+                        </ul>
+
+        </div>
+
+        <ul class="newlist">
+
+                   {dede:arclist typeid=117 row=6 col='1' titlelen=44 orderby='pubdate' }
+
+                    <li><a href='[field:arcurl/]'>[field:title/]</a> 
+{/dede:arclist}
+
+                </ul>
+
+    </div>
+
+    <div class="w230b">
+
+        <div class="w208 mt20">
+
+            <h2>人群养生</h2>
+
+<div class="img208">
+
+ {dede:arclist typeid="116" titlelen="10"  row=1  col='1'  flag ='h,p' orderby='pubdate'}
+
+        <a href="[field:arcurl/]">[field:image/]</a>
+
+        {/dede:arclist}</div>
+
+                        <ul class="slist">
+
+                              {dede:arclist typeid=116  flag ='c' row=8 col='1'  titlelen=34  orderby='pubdate' } 
+<li>
+
+<a href='[field:arcurl/]'>[field:title/]</a>  <br/>
+
+{/dede:arclist}
+
+                        </ul>
+
+        </div>
+
+        <div class="w208 mt10">
+
+            <h2>两性健康</h2>
+
+                        <div class="h75">
+
+                           {dede:arclist typeid=118 row=1 titlelen=20 infolen=120 flag ='h,p' limit='0,1' orderby='pubdate' }
+
+[field:imglink/]
+
+              <h4><a href="[field:filename/]">[field:title/]</a></h4>
+
+              <p>[field:info/]</p>{/dede:arclist}
+
+                          </div>
+
+            <ul class="slist">
+
+                            {dede:arclist typeid=118 row=8 col='1' titlelen=36 orderby='pubdate' }
+
+                    <li><a href='[field:arcurl/]'>[field:title/]</a> 
+{/dede:arclist}
+
+                        </ul>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div class="w980t mt20"><h2>友情链接</h2></div>
+
+<div class="flink">
+
+   <a href="http://www.chihuo55.com">吃货网</a>
+
+ </div>
+
+<script src="{dede:field name='templeturl'/}/style/js/footer.js"></script>
+
+<script src="{dede:field name='templeturl'/}/style/js/common.js"></script>
+
+<script src="{dede:field name='templeturl'/}/style/js/index.js"></script>
+
+<script src="{dede:field name='templeturl'/}/style/js/lazyload2013.js"></script>

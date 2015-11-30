@@ -1,0 +1,3 @@
+<a href="[field:arcurl/]">[field:image/]
+
+        <i><a href='[field:arcurl/]'>[field:title/]</i></a>

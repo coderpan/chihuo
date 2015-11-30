@@ -1,0 +1,2 @@
+INSERT INTO `chihuo_member_space` VALUES('1','10','0','admin的空间','','person','','');
+INSERT INTO `chihuo_member_space` VALUES('2','10','0','吃货仙的空间','','person','','');

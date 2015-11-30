@@ -1,0 +1,668 @@
+﻿<!doctype html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<title>家常食谱 - 吃货网</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/templets/style/css/common.css" rel="stylesheet">
+<link href="/templets/style/css/list.css" rel="stylesheet">
+<link href="/templets/style/css/page.css" rel="stylesheet">
+<script src="/templets/style/js/jquery1.8.3.min.js" charset="utf-8"></script>
+<link href="favicon.ico" type="image/x-icon">
+<style type="text/css">
+<!--
+.nav li {                   
+ display: inline;     
+ }
+-->
+</style>
+<div class="topbar">
+    <div class="w980">
+ <div class="bar_l">
+
+
+            <span id="set_home">设为首页</span>
+
+
+            <span id="set_fav">加入收藏</span>
+
+
+        </div>
+
+
+        <div class="bar_r">
+
+
+            <a class="webmap" style="">网站导航</a>
+
+
+            <div class="bar_menu">
+
+
+                <a class="category" href="http://www.chihuo55.com/">吃货网</a>
+
+
+                <div class="m_list">
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </div>  
+
+
+</div>
+
+
+
+
+
+<!--<div class="ad960"><script src="/templets/style/js/ad_index_baidu_960X90.js"></script></div>-->
+
+
+ <div class="header">
+
+
+    <h1 class="logo"><a href="http://www.chihuo55.com">吃货网</a></h1>
+
+
+    <div class="search">
+
+
+       <form name="so" method="GET" action="/plus/search.php">
+
+
+        <span class="inputwrap">
+
+
+        <input class="searchinput" name='keyword' type="text"  placeholder="更快速更准确的菜谱搜索" autocomplete="off" autofocus="true" x-webkit-speech="" x-webkit-grammar="builtin:translate" >
+
+
+        </span>
+
+
+        <input class="searchbtn" type="submit" value="">
+
+
+        </form >
+
+
+    </div>
+
+
+</div>
+
+
+<div class="navwrap">
+
+
+    <div class="nav">
+
+
+        <div class="lnav" id="navitem">
+
+
+            <a class='cur' href="/"><i>首页</i></a>
+
+
+                      
+
+<a href='/jiachangshipu/'><i>家常食谱</i></a> 
+
+
+
+<a href='/zhongguoshipu/'><i>中国食谱</i></a> 
+
+
+
+<a href='/hongpei/'><i>烘培</i></a> 
+
+
+
+<a href='/waiguoshipu/'><i>外国食谱</i></a> 
+
+
+
+<a href='/mimianzaliang/'><i>米面杂粮</i></a> 
+
+
+
+<a href='/yinshijiankang/'><i>饮食健康</i></a> 
+
+
+
+<a href='/shishangyinpin/'><i>时尚饮品</i></a> 
+
+
+
+<a href='/qinzipindao/'><i>亲子频道</i></a> 
+
+
+
+<a href='/kuailechufang/'><i>快乐厨房</i></a> 
+
+
+
+<a href='/jiankangyangsheng/'><i>健康养生</i></a> 
+
+
+
+        </div>
+
+    </div>
+
+    <ul class="navlist" id="navlist">
+
+           <li >
+
+
+            <a href="#">广告链接①</a>
+
+
+            <a href="#">广告链接②</a>
+
+
+            <a href="#">广告链接③</a>
+
+
+            <a href="#">广告链接④</a>
+
+
+            <a href="#">广告链接⑤</a>
+
+
+            <a href="#">广告链接⑥</a>
+
+
+            <a href="#">广告链接⑦</a>
+
+
+            <a href="#">广告链接⑧</a>
+    
+    <li class='hidden'>
+                                  <a href="/jiachangshipu/01">水产类菜谱</a>
+                                  <a href="/jiachangshipu/02">汤煲粥类食谱</a>
+                                  <a href="/jiachangshipu/03">肉类食谱</a>
+                                  <a href="/jiachangshipu/04">素食食谱</a>
+                                  <a href="/jiachangshipu/05">凉拌菜</a>
+                                  <a href="/jiachangshipu/06">禽类食谱</a>
+                                  <a href="/jiachangshipu/07">蛋类食谱</a>
+                       </li>
+                     <li class='hidden'>
+                                  <a href="/zhongguoshipu/01">京菜食谱</a>
+                                  <a href="/zhongguoshipu/02">四川风味</a>
+                                  <a href="/zhongguoshipu/03">上海美食</a>
+                                  <a href="/zhongguoshipu/04">东北风味</a>
+                                  <a href="/zhongguoshipu/05">广东粤菜</a>
+                                  <a href="/zhongguoshipu/06">湖北美食</a>
+                                  <a href="/zhongguoshipu/07">湖南美食</a>
+                                  <a href="/zhongguoshipu/08">淮扬菜</a>
+                                  <a href="/zhongguoshipu/09">海南食谱</a>
+                                  <a href="/zhongguoshipu/10">山东鲁菜</a>
+                                  <a href="/zhongguoshipu/11">江苏美食</a>
+                                  <a href="/zhongguoshipu/12">安徽美食</a>
+                                  <a href="/zhongguoshipu/13">福建美食</a>
+                                  <a href="/zhongguoshipu/14">天津美食</a>
+                                  <a href="/zhongguoshipu/15">云南美食</a>
+                                  <a href="/zhongguoshipu/16">潮州菜</a>
+                                  <a href="/zhongguoshipu/17">台湾菜</a>
+                                  <a href="/zhongguoshipu/18">点心食品</a>
+                                  <a href="/zhongguoshipu/19">米面主食</a>
+                                  <a href="/zhongguoshipu/20">火锅底料及配方</a>
+                       </li>
+                     <li class='hidden'>
+                                  <a href="/hongpei/01">面包</a>
+                                  <a href="/hongpei/02">蛋糕</a>
+                                  <a href="/hongpei/03">土司</a>
+                                  <a href="/hongpei/04">饼干</a>
+                                  <a href="/hongpei/05">玛芬</a>
+                                  <a href="/hongpei/06">月饼</a>
+                       </li>
+                     <li class='hidden'>
+                                  <a href="/waiguoshipu/01">韩国料理</a>
+                                  <a href="/waiguoshipu/03">意大利美食</a>
+                                  <a href="/waiguoshipu/04">日本料理</a>
+                                  <a href="/waiguoshipu/02">西餐面点</a>
+                       </li>
+                     <li class='hidden'>
+                                  <a href="/mimianzaliang/01">米饭</a>
+                                  <a href="/mimianzaliang/02">面食</a>
+                                  <a href="/mimianzaliang/03">包子,花卷</a>
+                                  <a href="/mimianzaliang/04">饼子</a>
+                       </li>
+                     <li class='hidden'>
+                                  <a href="/yinshijiankang/01">健康饮食</a>
+                                  <a href="/yinshijiankang/02">瘦身美容</a>
+                                  <a href="/yinshijiankang/03">食疗食补</a>
+                                  <a href="/yinshijiankang/04">药膳食谱</a>
+                       </li>
+                     <li class='hidden'>
+                                  <a href="/shishangyinpin/01">含酒精饮品</a>
+                                  <a href="/shishangyinpin/02">茶及咖啡饮品</a>
+                                  <a href="/shishangyinpin/03">果汁及其他饮品</a>
+                       </li>
+                     <li class='hidden'>
+                                  <a href="/qinzipindao/01">儿童食品</a>
+                                  <a href="/qinzipindao/02">女性保健</a>
+                                  <a href="/qinzipindao/03">孩子健康</a>
+                                  <a href="/qinzipindao/04">孕婴保健</a>
+                       </li>
+                     <li class='hidden'>
+                                  <a href="/kuailechufang/01">美食DIY</a>
+                                  <a href="/kuailechufang/02">烹饪技法</a>
+                                  <a href="/kuailechufang/03">烹饪小窍门</a>
+                                  <a href="/kuailechufang/04">厨具使用及选购</a>
+                                  <a href="/kuailechufang/05">食材加工</a>
+                       </li>
+                     <li class='hidden'>
+                                  <a href="/jiankangyangsheng/01">中医养生</a>
+                                  <a href="/jiankangyangsheng/02">饮食养生</a>
+                                  <a href="/jiankangyangsheng/03">运动养生</a>
+                                  <a href="/jiankangyangsheng/04">人群养生</a>
+                                  <a href="/jiankangyangsheng/05">疾病预防</a>
+                                  <a href="/jiankangyangsheng/06">两性健康</a>
+                                  <a href="/jiankangyangsheng/07">健康心理</a>
+                                  <a href="/jiankangyangsheng/08">养生图库</a>
+                       </li>
+
+              </ul>
+
+
+</div>
+<div class="w980 clearfix">
+
+
+  <div class="w640">
+
+
+    <div class="crumbs">你的位置 : <a href='http://chihuo55.com/'>主页</a> > <a href='/jiachangshipu/'>家常食谱</a> >  </div>
+
+
+    <h1 class="item">家常食谱</h1>
+
+
+    <div class="phlist  clearfix">
+
+
+      <p>  
+
+<a href="/jiachangshipu/07_408.html"><img src='/uploads/allimg/140110/1_0110123335A57.jpg' border='0' width='120' height='120' alt='派皮香蕉蛋挞'><span class="title">派皮香蕉蛋挞</span></a><a href="/jiachangshipu/07_406.html"><img src='/uploads/allimg/140110/1_0110123335Y16.jpg' border='0' width='120' height='120' alt='派皮原味蛋挞'><span class="title"><b>派皮原味蛋挞</b></span></a><a href="/jiachangshipu/07_405.html"><img src='/uploads/allimg/140110/1_01101233355519.jpg' border='0' width='120' height='120' alt='韭菜蛤蜊煎蛋'><span class="title">韭菜蛤蜊煎蛋</span></a><a href="/jiachangshipu/07_403.html"><img src='/uploads/allimg/140110/1_01101233353220.jpg' border='0' width='120' height='120' alt='香脆蛋卷(2)'><span class="title">香脆蛋卷(2)</span></a><a href="/jiachangshipu/07_402.html"><img src='/uploads/allimg/140110/1_0110123335N46.jpg' border='0' width='120' height='120' alt='豆豉荷包蛋'><span class="title">豆豉荷包蛋</span></a><a href="/jiachangshipu/07_400.html"><img src='/uploads/allimg/140110/1_01101233351W0.jpg' border='0' width='120' height='120' alt='罗勒香肠炒鸡蛋'><span class="title">罗勒香肠炒鸡蛋</span></a><a href="/jiachangshipu/07_399.html"><img src='/uploads/allimg/140110/1_0110123335M12.jpg' border='0' width='120' height='120' alt='美味烤鸟蛋'><span class="title">美味烤鸟蛋</span></a><a href="/jiachangshipu/07_398.html"><img src='/uploads/allimg/140110/1_0110123335O41.jpg' border='0' width='120' height='120' alt='港式牛油蛋挞'><span class="title">港式牛油蛋挞</span></a><a href="/jiachangshipu/07_396.html"><img src='/uploads/allimg/140110/1_01101233355224.jpg' border='0' width='120' height='120' alt='猕猴桃木瓜蛋挞'><span class="title">猕猴桃木瓜蛋挞</span></a><a href="/jiachangshipu/07_395.html"><img src='/uploads/allimg/140110/1_011012333544M.jpg' border='0' width='120' height='120' alt='西葫芦烘蛋'><span class="title">西葫芦烘蛋</span></a><a href="/jiachangshipu/07_394.html"><img src='/uploads/allimg/140110/1_0110123334G24.jpg' border='0' width='120' height='120' alt='糖心荷包蛋(煎蛋)'><span class="title">糖心荷包蛋(煎蛋)</span></a><a href="/jiachangshipu/07_393.html"><img src='/uploads/allimg/140110/1_0110123334Wb.jpg' border='0' width='120' height='120' alt='晶莹剔透的芦荟蛋挞'><span class="title">晶莹剔透的芦荟蛋挞</span></a><a href="/jiachangshipu/07_392.html"><img src='/uploads/allimg/140110/1_011012333420B.jpg' border='0' width='120' height='120' alt='泰酱荷包蛋'><span class="title">泰酱荷包蛋</span></a><a href="/jiachangshipu/07_391.html"><img src='/uploads/allimg/140110/1_0110123334IZ.jpg' border='0' width='120' height='120' alt='港式蛋挞'><span class="title"><b>港式蛋挞</b></span></a><a href="/jiachangshipu/07_390.html"><img src='/uploads/allimg/140110/1_011012333493c.jpg' border='0' width='120' height='120' alt='蛤蜊蒸蛋(7)'><span class="title">蛤蜊蒸蛋(7)</span></a><a href="/jiachangshipu/07_389.html"><img src='/uploads/allimg/140110/1_01101233344230.jpg' border='0' width='120' height='120' alt='香酥蛋松'><span class="title">香酥蛋松</span></a><a href="/jiachangshipu/07_388.html"><img src='/uploads/allimg/140110/1_01101233344E3.jpg' border='0' width='120' height='120' alt='凉拌鹌鹑蛋'><span class="title"><b>凉拌鹌鹑蛋</b></span></a><a href="/jiachangshipu/07_387.html"><img src='/uploads/allimg/140110/1_01101233341022.jpg' border='0' width='120' height='120' alt='香辣金钱蛋(虎皮蛋)'><span class="title">香辣金钱蛋(虎皮蛋)</span></a><a href="/jiachangshipu/07_386.html"><img src='/uploads/allimg/140110/1_01101233344G5.jpg' border='0' width='120' height='120' alt='葡式奶香蛋挞'><span class="title">葡式奶香蛋挞</span></a><a href="/jiachangshipu/07_385.html"><img src='/uploads/allimg/140110/1_01101233343L6.jpg' border='0' width='120' height='120' alt='番茄炒蛋'><span class="title">番茄炒蛋</span></a><a href="/jiachangshipu/07_384.html"><img src='/uploads/allimg/140110/1_0110123334L56.jpg' border='0' width='120' height='120' alt='虎皮鹌鹑蛋'><span class="title"><b>虎皮鹌鹑蛋</b></span></a><a href="/jiachangshipu/07_383.html"><img src='/uploads/allimg/140110/1_01101233341E2.jpg' border='0' width='120' height='120' alt='自制咸鸭蛋'><span class="title">自制咸鸭蛋</span></a><a href="/jiachangshipu/07_382.html"><img src='/uploads/allimg/140110/1_01101233341055.jpg' border='0' width='120' height='120' alt='烧辣椒拌皮蛋'><span class="title">烧辣椒拌皮蛋</span></a><a href="/jiachangshipu/07_380.html"><img src='/uploads/allimg/140110/1_01101233341149.jpg' border='0' width='120' height='120' alt='南瓜蛋羹'><span class="title">南瓜蛋羹</span></a><a href="/jiachangshipu/07_379.html"><img src='/uploads/allimg/140110/1_01101233334163.jpg' border='0' width='120' height='120' alt='家常鸡蛋羹'><span class="title">家常鸡蛋羹</span></a><a href="/jiachangshipu/07_378.html"><img src='/uploads/allimg/140110/1_01101233331464.jpg' border='0' width='120' height='120' alt='青椒炒荷包蛋'><span class="title">青椒炒荷包蛋</span></a><a href="/jiachangshipu/07_377.html"><img src='/uploads/allimg/140110/1_01101233335326.jpg' border='0' width='120' height='120' alt='虎皮凉鸡蛋'><span class="title">虎皮凉鸡蛋</span></a><a href="/jiachangshipu/07_376.html"><img src='/uploads/allimg/140110/1_01101233332521.jpg' border='0' width='120' height='120' alt='懒人版葡式蛋挞'><span class="title">懒人版葡式蛋挞</span></a><a href="/jiachangshipu/07_375.html"><img src='/uploads/allimg/140110/1_011012333330b.jpg' border='0' width='120' height='120' alt='中国版“苏格兰蛋”'><span class="title">中国版“苏格兰蛋”</span></a><a href="/jiachangshipu/07_374.html"><img src='/uploads/allimg/140110/1_01101233332407.jpg' border='0' width='120' height='120' alt='肉臊蒸蛋'><span class="title">肉臊蒸蛋</span></a><a href="/jiachangshipu/07_373.html"><img src='/uploads/allimg/140110/1_0110123333C47.jpg' border='0' width='120' height='120' alt='焦糖布丁'><span class="title"><b>焦糖布丁</b></span></a><a href="/jiachangshipu/07_372.html"><img src='/uploads/allimg/140110/1_0110123333b29.jpg' border='0' width='120' height='120' alt='虾仁木耳滑蛋'><span class="title">虾仁木耳滑蛋</span></a><a href="/jiachangshipu/07_371.html"><img src='/uploads/allimg/140110/1_01101233335E3.jpg' border='0' width='120' height='120' alt='鲜菌菇滑蛋'><span class="title"><b>鲜菌菇滑蛋</b></span></a><a href="/jiachangshipu/07_370.html"><img src='/uploads/allimg/140110/1_01101233336050.jpg' border='0' width='120' height='120' alt='水炒鸡蛋'><span class="title"><b>水炒鸡蛋</b></span></a><a href="/jiachangshipu/07_369.html"><img src='/uploads/allimg/140110/1_0110123333HI.jpg' border='0' width='120' height='120' alt='乡巴佬卤蛋'><span class="title">乡巴佬卤蛋</span></a><a href="/jiachangshipu/05_368.html"><img src='/uploads/allimg/140110/1_0110111134b54.jpg' border='0' width='120' height='120' alt='水晶皮冻（2）'><span class="title">水晶皮冻（2）</span></a><a href="/jiachangshipu/05_367.html"><img src='/uploads/allimg/140110/1_011011113454O.jpg' border='0' width='120' height='120' alt='双仁拌菠菜'><span class="title"><b>双仁拌菠菜</b></span></a><a href="/jiachangshipu/05_366.html"><img src='/uploads/allimg/140110/1_01101111342134.jpg' border='0' width='120' height='120' alt='麻酱拌山苜楂菜'><span class="title"><b>麻酱拌山苜楂菜</b></span></a><a href="/jiachangshipu/05_365.html"><img src='/uploads/allimg/140110/1_011011113351K.jpg' border='0' width='120' height='120' alt='蒜泥拌蕨菜'><span class="title">蒜泥拌蕨菜</span></a><a href="/jiachangshipu/05_364.html"><img src='/uploads/allimg/140110/1_01101111335125.jpg' border='0' width='120' height='120' alt='凉拌百合黄花菜'><span class="title">凉拌百合黄花菜</span></a><a href="/jiachangshipu/05_363.html"><img src='/uploads/allimg/140110/1_01101111331c9.jpg' border='0' width='120' height='120' alt='芦笋刺身'><span class="title">芦笋刺身</span></a><a href="/jiachangshipu/05_362.html"><img src='/uploads/allimg/140110/1_011011113312Z.jpg' border='0' width='120' height='120' alt='凉拌油麦菜'><span class="title"><b>凉拌油麦菜</b></span></a><a href="/jiachangshipu/05_361.html"><img src='/uploads/allimg/140110/1_01101111334309.jpg' border='0' width='120' height='120' alt='凉拌小白菜'><span class="title">凉拌小白菜</span></a><a href="/jiachangshipu/05_360.html"><img src='/uploads/allimg/140110/1_01101111331H2.jpg' border='0' width='120' height='120' alt='香拌菠菜'><span class="title">香拌菠菜</span></a><a href="/jiachangshipu/05_359.html"><img src='/uploads/allimg/140110/1_01101111335392.jpg' border='0' width='120' height='120' alt='凉拌裙带菜'><span class="title">凉拌裙带菜</span></a><a href="/jiachangshipu/05_358.html"><img src='/uploads/allimg/140110/1_0110111133V01.jpg' border='0' width='120' height='120' alt='糖醋紫芯白萝卜'><span class="title">糖醋紫芯白萝卜</span></a><a href="/jiachangshipu/05_357.html"><img src='/uploads/allimg/140110/1_01101111334262.jpg' border='0' width='120' height='120' alt='清热解毒、消炎杀菌-凉拌鱼腥草'><span class="title"><b>清热解毒、消炎杀菌-凉拌鱼腥草</b></span></a><a href="/jiachangshipu/05_356.html"><img src='/uploads/allimg/140110/1_01101111332639.jpg' border='0' width='120' height='120' alt='凉拌金茸蒜苔'><span class="title">凉拌金茸蒜苔</span></a><a href="/jiachangshipu/05_355.html"><img src='/uploads/allimg/140110/1_01101111339292.jpg' border='0' width='120' height='120' alt='凉拌娃娃菜'><span class="title">凉拌娃娃菜</span></a><a href="/jiachangshipu/05_354.html"><img src='/uploads/allimg/140110/1_01101111334449.jpg' border='0' width='120' height='120' alt='凉拌韭菜'><span class="title">凉拌韭菜</span></a><a href="/jiachangshipu/05_353.html"><img src='/uploads/allimg/140110/1_01101111335214.jpg' border='0' width='120' height='120' alt='蒜泥黑木耳'><span class="title"><b>蒜泥黑木耳</b></span></a><a href="/jiachangshipu/05_352.html"><img src='/uploads/allimg/140110/1_01101111332C0.jpg' border='0' width='120' height='120' alt='凉拌芹菜三丝'><span class="title">凉拌芹菜三丝</span></a><a href="/jiachangshipu/05_351.html"><img src='/uploads/allimg/140110/1_01101111324K4.jpg' border='0' width='120' height='120' alt='凉拌香椿'><span class="title">凉拌香椿</span></a><a href="/jiachangshipu/05_350.html"><img src='/uploads/allimg/140110/1_0110111132N44.jpg' border='0' width='120' height='120' alt='辣拌山胡萝卜'><span class="title">辣拌山胡萝卜</span></a><a href="/jiachangshipu/05_349.html"><img src='/uploads/allimg/140110/1_0110111132D93.jpg' border='0' width='120' height='120' alt='野生荠菜拌豆干'><span class="title">野生荠菜拌豆干</span></a><a href="/jiachangshipu/05_348.html"><img src='/uploads/allimg/140110/1_0110111132R62.jpg' border='0' width='120' height='120' alt='凉拌苦菊的做法'><span class="title">凉拌苦菊的做法</span></a><a href="/jiachangshipu/05_347.html"><img src='/uploads/allimg/140110/1_0110111132KO.jpg' border='0' width='120' height='120' alt='杏仁黑木耳拌苦菊'><span class="title">杏仁黑木耳拌苦菊</span></a><a href="/jiachangshipu/05_346.html"><img src='/uploads/allimg/140110/1_011011113212N.jpg' border='0' width='120' height='120' alt='酸辣豌豆凉粉'><span class="title">酸辣豌豆凉粉</span></a><a href="/jiachangshipu/05_345.html"><img src='/uploads/allimg/140110/1_01101111324591.jpg' border='0' width='120' height='120' alt='凉拌圆白菜'><span class="title"><b>凉拌圆白菜</b></span></a><a href="/jiachangshipu/05_344.html"><img src='/uploads/allimg/140110/1_01101111325431.jpg' border='0' width='120' height='120' alt='白糖萝卜丝'><span class="title">白糖萝卜丝</span></a><a href="/jiachangshipu/05_343.html"><img src='/uploads/allimg/140110/1_0110111132Z29.jpg' border='0' width='120' height='120' alt='椒油脆莴苣'><span class="title"><b>椒油脆莴苣</b></span></a><a href="/jiachangshipu/05_342.html"><img src='/uploads/allimg/140110/1_011011113254F.jpg' border='0' width='120' height='120' alt='金针菇拌粉丝'><span class="title">金针菇拌粉丝</span></a><a href="/jiachangshipu/05_341.html"><img src='/uploads/allimg/140110/1_01101111322V1.jpg' border='0' width='120' height='120' alt='呛拌莲藕'><span class="title">呛拌莲藕</span></a><a href="/jiachangshipu/05_340.html"><img src='/uploads/allimg/140110/1_0110111132NP.jpg' border='0' width='120' height='120' alt='蒜泥拌油条黄瓜nbsp;'><span class="title">蒜泥拌油条黄瓜nbsp;</span></a>
+         </p>
+
+
+    </div>
+ <div class="page"><ul class="pagelist">
+				<div class="nav"><li><a href='list_1_1.html'>首页</a></li>
+<li><a href='list_1_3.html'>上一页</a></li>
+<li><a href='list_1_1.html'>1</a></li>
+<li><a href='list_1_2.html'>2</a></li>
+<li><a href='list_1_3.html'>3</a></li>
+<li class="thisclass">4</li>
+<li><a href='list_1_5.html'>5</a></li>
+<li><a href='list_1_6.html'>6</a></li>
+<li><a href='list_1_7.html'>7</a></li>
+<li><a href='list_1_8.html'>8</a></li>
+<li><a href='list_1_9.html'>9</a></li>
+<li><a href='list_1_5.html'>下一页</a></li>
+<li><a href='list_1_9.html'>末页</a></li>
+<li><span class="pageinfo">共 <strong>9</strong>页<strong>546</strong>条</span></li>
+</div>
+			</ul></div>
+
+    <div class="w640t">
+
+
+      <h2>大家都在看</h2>
+
+
+    </div>
+
+
+    <div class="cppic">
+
+
+      <p>
+
+
+              <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+    <td width='25%'>
+<a href="/jiachangshipu/06_437.html"><img src='/uploads/allimg/140110/1_01101233006413.jpg' border='0' width='120' height='120' alt='泰式香辣烤鸡翅'><span class="title">泰式香辣烤鸡翅</span></a>
+    </td>
+    <td width='25%'>
+<a href="/jiachangshipu/04_2846.html"><img src='/uploads/allimg/140115/1_0115153424O62.jpg' border='0' width='120' height='120' alt='酥炸藕合'><span class="title">酥炸藕合</span></a>
+    </td>
+    <td width='25%'>
+<a href="/jiachangshipu/01_195.html"><img src='/uploads/allimg/140109/1_01091HR4G49.jpg' border='0' width='120' height='120' alt='葱香油爆虾'><span class="title">葱香油爆虾</span></a>
+    </td>
+    <td width='25%'>
+<a href="/jiachangshipu/01_2950.html"><img src='/uploads/allimg/140115/1_0115153433Q47.jpg' border='0' width='120' height='120' alt='豉汁蒸鲶鱼'><span class="title">豉汁蒸鲶鱼</span></a>
+    </td>
+    </tr>
+<tr>
+    <td width='25%'>
+<a href="/jiachangshipu/01_2949.html"><img src='/uploads/allimg/140115/1_01151534331I2.jpg' border='0' width='120' height='120' alt='紫苏鱼头豆腐煲'><span class="title">紫苏鱼头豆腐煲</span></a>
+    </td>
+    <td width='25%'>
+<a href="/jiachangshipu/01_2948.html"><img src='/uploads/allimg/140115/1_0115153433Ab.jpg' border='0' width='120' height='120' alt='南瓜咸肉蒸膏蟹'><span class="title">南瓜咸肉蒸膏蟹</span></a>
+    </td>
+    <td width='25%'>
+<a href="/jiachangshipu/01_2945.html"><img src='/uploads/allimg/140115/1_01151534331255.jpg' border='0' width='120' height='120' alt='带鱼炖豆腐'><span class="title">带鱼炖豆腐</span></a>
+    </td>
+    <td width='25%'>
+<a href="/jiachangshipu/01_2944.html"><img src='/uploads/allimg/140115/1_01151534334020.jpg' border='0' width='120' height='120' alt='三鲜虾仁'><span class="title">三鲜虾仁</span></a>
+    </td>
+    </tr>
+    </table>
+
+
+              </p>
+
+
+    </div>
+
+
+    <div class="bottom_640X90"> 
+
+    </div>
+
+
+    <div class="ft_ad_640*200"> 
+
+
+      <script src='/plus/ad_js.php?aid=24' language='javascript'></script>
+
+
+  </div>
+
+
+</div>
+
+
+<div class="w300">
+
+
+        <div class="ad300">
+
+
+               <script src='/plus/ad_js.php?aid=26' language='javascript'></script>
+
+
+                </div>
+
+
+        <h2 class="w300h2">热门食材</h2>
+
+
+        <div class="rmsc">
+
+
+                        
+
+<a href='/zhuangti03/guojiang/'>果酱</a> 
+
+
+
+<a href='/zhuangti03/nangua/'>南瓜</a> 
+
+
+
+<a href='/zhuangti03/doufu/'>豆腐</a> 
+
+
+
+<a href='/zhuangti03/huanggua/'>黄瓜</a> 
+
+
+
+<a href='/zhuangti03/xiaren/'>虾仁</a> 
+
+
+
+<a href='/zhuangti03/luobu/'>萝卜</a> 
+
+
+
+<a href='/zhuangti03/paigu/'>排骨</a> 
+
+
+
+<a href='/zhuangti03/qiezi/'>茄子</a> 
+
+
+
+<a href='/zhuangti03/tudou/'>土豆</a> 
+
+
+
+<a href='/zhuangti03/fanqie/'>番茄</a> 
+
+
+
+                    </div>
+
+
+        <h2 class="w300h2">专题推荐</h2>
+
+
+        <ul class="zttj">
+
+
+                                      <li>   
+
+<a href='/zhuanti01/doufudezuofa/'>豆腐的做法</a> 
+
+
+
+<a href='/zhuanti01/dangaodezuofa/'>蛋糕的做法</a> 
+
+
+
+<a href='/zhuanti01/jidandezuofa/'>鸡蛋的做法</a> 
+
+
+
+<a href='/zhuanti01/huoguodezuofa/'>火锅的做法</a> 
+
+
+
+<a href='/zhuanti01/jichidezuofa/'>鸡翅的做法</a> 
+
+
+
+<a href='/zhuanti01/tudoudezuofa/'>土豆的做法</a> 
+
+
+
+<a href='/zhuanti01/paigudezuofa/'>排骨的做法</a> 
+
+
+
+<a href='/zhuanti01/niuroudezuofa/'>牛肉的做法</a> 
+
+            </li>               </ul>
+
+
+       <div class="ztpic">
+            <ul>    <li>
+                                       <a href='/jiankangyangsheng/02_2499.html'><img src='/uploads/allimg/140112/1212021313_lit.jpg' border='0' width='120' height='120' alt='女性喝红糖 过多危害身体'></a></a>
+                    <h3><span class="cr">常识</span><a href="/jiankangyangsheng/02_2499.html">女性喝红糖 过多危害身体</a></h3>
+
+                    <p>   <a href='/jiankangyangsheng/02_2499.html'>女性喝红糖 过多危害身体</a>
+<a href='/jiankangyangsheng/03_2571.html'>如何提高乒乓球击球力量？</a>
+<a href='/jiankangyangsheng/01_2462.html'>中医教你看“五官气色”知健</a>
+<a href='/jiankangyangsheng/03_2576.html'>有效骑车瘦身法 快速瘦身</a>
+
+                                          </p>
+                </li>
+                  <li>
+                                       <a href='/jiankangyangsheng/05_2667.html'><img src='/uploads/allimg/140112/1255551C4_lit.jpg' border='0' width='120' height='120' alt='8大常见癌症的免死金牌'></a></a>
+                    <h3><span class="cy">健康</span><a href="/jiankangyangsheng/05_2667.html">8大常见癌症的免死金牌</a></h3>
+
+                    <p>   <a href='/jiankangyangsheng/05_2667.html'>8大常见癌症的免死金牌</a>
+<a href='/jiankangyangsheng/05_2668.html'>女人预防乳腺癌吃哪些食物</a>
+<a href='/jiankangyangsheng/06_2730.html'>床太大并不利于夫妻亲热</a>
+<a href='/jiankangyangsheng/04_2624.html'>七种果蔬改善消化不良</a>
+
+                                          </p>
+                </li>
+
+<li>
+                                        <a href='/qinzipindao/04_2134.html'><img src='/uploads/allimg/140112/1_01121129495955.jpg' border='0' width='120' height='120' alt='黄豆芽鲫鱼汤--增乳营养汤'></a></a>
+                    <h3><span class="cg">母婴</span><a href="/qinzipindao/04_2134.html">黄豆芽鲫鱼汤--增乳营养汤</a></h3>
+
+                     <p>   <a href='/qinzipindao/04_2134.html'>黄豆芽鲫鱼汤--增乳营养汤</a>
+<a href='/qinzipindao/03_2133.html'>10个绝招制服宝宝挑食</a>
+<a href='/qinzipindao/03_2132.html'>5食谱调理感冒宝宝</a>
+<a href='/qinzipindao/03_2131.html'>让孩子吃点粗粮</a>
+
+                                          </p>
+                </li>
+                            </ul>
+        </div>
+        <div class="ad300 mt20"><script src='/plus/ad_js.php?aid=27' language='javascript'></script></div>
+        <h2 class="w300h2">热门推荐</h2>
+        <div class="rmtj">
+            <ul>  <li>
+                    <a href='/jiankangyangsheng/05_2667.html'><img src='/uploads/allimg/140112/1255551C4_lit.jpg' border='0' width='120' height='120' alt='8大常见癌症的免死金牌'></a>
+                    <h3><a href="/jiankangyangsheng/05_2667.html">8大常见癌症的免死</a></h3>
+                    <p>#12288;#12288; 很多食物都可以帮助我们预防癌症，可以说，它们是我们对抗癌症的ldquo;免死金牌</p>
+<li>
+                    <a href='/jiankangyangsheng/05_2668.html'><img src='/uploads/allimg/140112/1256132323_lit.jpg' border='0' width='120' height='120' alt='女人预防乳腺癌吃哪些食物'></a>
+                    <h3><a href="/jiankangyangsheng/05_2668.html">女人预防乳腺癌吃</a></h3>
+                    <p>#12288;#12288; 1.低脂酸奶#12288;#12288; 来自荷兰癌症基金会的最新研究显示，女人每天都饮用富含优</p>
+<li>
+                    <a href='/jiankangyangsheng/06_2730.html'><img src='/uploads/allimg/140112/131QJ2Z_lit.jpg' border='0' width='120' height='120' alt='床太大并不利于夫妻亲热'></a>
+                    <h3><a href="/jiankangyangsheng/06_2730.html">床太大并不利于夫</a></h3>
+                    <p>性爱是件美妙的事，不仅能让人享受快感、增进感情，还有益健康。</p>
+
+                            </ul>
+        </div>
+        <div class="w300t"><h2>热门食谱</h2></div>
+        <div class="rmsc">
+                        
+
+<a href='/zhuanti02/paigudonggua/'>排骨冬瓜</a> 
+
+
+
+<a href='/zhuanti02/yuebing/'>月饼</a> 
+
+
+
+<a href='/zhuanti02/chaodan/'>炒蛋</a> 
+
+
+
+<a href='/zhuanti02/jimogu/'>鸡蘑菇</a> 
+
+
+
+<a href='/zhuanti02/tudouji/'>土豆鸡</a> 
+
+
+
+<a href='/zhuanti02/paigulianou/'>排骨莲藕</a> 
+
+
+
+<a href='/zhuanti02/liangban/'>凉拌</a> 
+
+
+
+<a href='/zhuanti02/mianbao/'>面包</a> 
+
+
+
+<a href='/zhuanti02/xiangguyoucai/'>香菇油菜</a> 
+
+
+
+<a href='/zhuanti02/paiguyumi/'>排骨玉米</a> 
+
+
+
+<a href='/zhuanti02/caitang/'>菜汤</a> 
+
+
+
+<a href='/zhuanti02/jitang/'>鸡汤</a> 
+
+
+
+<a href='/zhuanti02/paiguou/'>排骨藕</a> 
+
+
+
+<a href='/zhuanti02/jitudou/'>鸡土豆</a> 
+
+
+
+<a href='/zhuanti02/tusi/'>吐司</a> 
+
+
+                  </div>
+    <script src='/plus/ad_js.php?aid=28' language='javascript'></script>
+        <h2 class="w300h2">推荐图片</h2>
+        <div class="mstp clearfix">
+            <p>
+                        <table width='100%' border='0' cellspacing='0' cellpadding='0'>
+<tr>
+    <td width='50%'>
+<a href="/jiankangyangsheng/07_2753.html"><img src='/uploads/allimg/140112/13222I4B_lit.jpg' border='0' width='120' height='120' alt='你知道什么是密集恐惧症吗？'><span class="title">你知道什么是密集恐惧症</span></a>
+    </td>
+    <td width='50%'>
+<a href="/jiankangyangsheng/06_2735.html"><img src='/uploads/allimg/140112/1320161644_lit.jpg' border='0' width='120' height='120' alt=' 13种情况千万别同房！！！'><span class="title"> 13种情况千万别同房！！</span></a>
+    </td>
+    </tr>
+<tr>
+    <td width='50%'>
+<a href="/jiankangyangsheng/06_2734.html"><img src='/uploads/allimg/140112/1320026325_lit.jpg' border='0' width='120' height='120' alt='性生活必须注意的事项'><span class="title">性生活必须注意的事项</span></a>
+    </td>
+    <td width='50%'>
+<a href="/jiankangyangsheng/06_2728.html"><img src='/uploads/allimg/140112/131A52255_lit.jpg' border='0' width='120' height='120' alt='哪些食物会败性？爱爱前不能吃'><span class="title">哪些食物会败性？爱爱前</span></a>
+    </td>
+    </tr>
+    </table>
+
+                         </p>
+        </div>
+        <div class="ad300 mt20"><script src='/plus/ad_js.php?aid=29' language='javascript'></script></div>
+        <!--height85-->
+        <div style="height:85px"></div>
+
+
+    </div>
+
+
+</div>
+
+
+<script src="/templets/style/js/footer.js"></script> 
+
+
+<script src="/templets/style/js/common.js"></script> 
+
+
+<script src="/templets/style/js/list.js"></script> 
+
+
+<script type="text/javascript" id="bdshare_js" data="type=tools&uid=0" ></script> 
+
+
+<script type="text/javascript" id="bdshell_js"></script> 
+
+
+<script type="text/javascript">
+
+
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+
+
+</script> 
