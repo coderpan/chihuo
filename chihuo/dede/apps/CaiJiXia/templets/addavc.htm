@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>采集侠</title>
+<link href="<?php echo $css?>/base.css" rel="stylesheet" type="text/css">
+<link href="apps/CaiJiXia/style/cjx.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" id="cjxjq" src="<?php echo $cjxhost?>/Plugins/apps/CaiJiXia/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="apps/CaiJiXia/style/dialog.js"></script>
+<script type="text/javascript" src="apps/CaiJiXia/style/cjx.js"></script>
+</head>
+<body topmargin="8">
+<form method="post">
+<table width="98%"  border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D1DDAA">
+    <tr> 
+      <td height="20" colspan="2" background="<?php echo $img?>/tbg.gif">
+      <b>&nbsp;采集侠 &gt; <a href="cjx.php?ac=advcjx">超级采集</a> &gt; 添加采集任务：</b> </td>
+    </tr>
+    <tr> 
+      <td height="30" colspan="2" bgcolor="#FFFFFF">
+      	[规则说明]：&quot;起始无重复HTML[内容]结尾无重复HTML&quot;，如标题规则：&lt;title&gt;[内容]&lt;/title&gt; ，规则可留空，留空则程序自动识别</td>
+    </tr>	
+    <tr> 
+      <td width="15%" align="center" bgcolor="#FFFFFF">采集入口地址</td>
+      <td width="70%" bgcolor="#FFFFFF"><input name="siteurl" type="text" style="width:300px;" value="http://"> * </td>
+    </tr>
+    <tr> 
+      <td width="15%" align="center" bgcolor="#FFFFFF">绑定栏目id</td>
+      <td width="70%" bgcolor="#FFFFFF"><input name="typeid" type="text" style="width:300px;"></td>
+    </tr>
+    <tr> 
+      <td width="15%" align="center" bgcolor="#FFFFFF">标题规则</td>
+      <td width="70%" bgcolor="#FFFFFF"><textarea name="title" style="width:280px; height:60px;"></textarea></td>
+    </tr>
+    <tr> 
+      <td width="15%" align="center" bgcolor="#FFFFFF">作者规则</td>
+      <td width="70%" bgcolor="#FFFFFF"><textarea name="writer" style="width:280px; height:60px;"></textarea></td>
+    </tr>
+    <tr> 
+      <td width="15%" align="center" bgcolor="#FFFFFF">来源规则</td>
+      <td width="70%" bgcolor="#FFFFFF"><textarea name="source" style="width:280px; height:60px;"></textarea></td>
+    </tr>
+    <tr> 
+      <td width="15%" align="center" bgcolor="#FFFFFF">内容规则</td>
+      <td width="70%" bgcolor="#FFFFFF"><textarea name="content" style="width:280px; height:60px;"></textarea> <span style="color:#666;">*</span></td>
+    </tr>
+    <!--<tr> 
+      <td width="15%" align="center" bgcolor="#FFFFFF">分页规则</td>
+      <td width="70%" bgcolor="#FFFFFF"><textarea name="page" style="width:280px; height:60px;"></textarea></td>
+    </tr> -->
+
+	
+    <tr bgcolor="#F9FDF0"> 
+      <td height="28" colspan="2" style="padding-left:150px;">
+	  	<input name="submit" class="coolbg np" type="submit" value="提交">
+      </td>
+    </tr>
+</table>
+</form>
+<div id="footer" style="text-align:center; padding:10px;"></div>
+<script type="text/javascript">$(function(){$.getScript("http://www.yikenw.com/ad/dedecjx_footer.js");})</script>
+</body>
+</html>

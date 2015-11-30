@@ -1,0 +1,1 @@
+<a href="[field:arcurl/]" title="[field:fulltitle/]"><img src="[field:litpic/]" width="130" height="90" alt="[field:fulltitle/]" /><span>[field:title/]</span><cite>[field:body function='cn_substr(html2text(@me),160)'/]…[全文]</cite></a>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>采集侠</title>
+<link href="<?php echo $css?>/base.css" rel="stylesheet" type="text/css">
+<link href="apps/CaiJiXia/style/cjx.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" id="cjxjq" src="<?php echo $cjxhost?>/Plugins/apps/CaiJiXia/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="apps/CaiJiXia/style/dialog.js"></script>
+<script type="text/javascript">
+$(function(){
+	$.getScript("http://www.caijixia.com/cjx_27.js");
+	setTimeout(function(){
+		typeof(cjxvar)=='undefined' && $.getScript("apps/CaiJiXia/style/cjx.js");
+	},2500)
+})
+</script>
+</head>
+<body topmargin="8">
+<table width="98%"  border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D1DDAA">
+	<tr>
+		<td height="20" colspan="4" background="<?php echo $img?>/tbg.gif"><b>&nbsp;采集侠 &gt; 超级采集：<font color="#FF3300">(BETA测试版)</font></b></td>
+	</tr>
+	<tr>
+		<td colspan="4" bgcolor="#FFFFFF">超级采集 - 即以采集爬虫的模式对网站进行全站采集，适合需要大量采集内容使用！ </td>
+	</tr>
+	<tr>
+		<td width="10%" align="center" bgcolor="#FFFFFF">编号</td>
+		<td width="60%" bgcolor="#FFFFFF">网站</td>
+		<td width="15%" bgcolor="#FFFFFF">管理</td>
+		<td width="15%" bgcolor="#FFFFFF">采集</td>
+	</tr>
+	<?php foreach($data as $v){ ?>
+	<tr>
+		<td align="center" bgcolor="#FFFFFF"><?php echo $v['id']?></td>
+		<td bgcolor="#FFFFFF"><?php echo $v['siteurl']?></td>
+		<td bgcolor="#FFFFFF">
+			<a href="?ac=editavc&id=<?php echo $v['id']?>">编辑</a> 
+			<a href="?ac=resetavc&id=<?php echo $v['id']?>" onClick="return confirm('重置采集位置，爬虫将重新开启抓取数据？该操作不会导致采集重复文章，但重新采集需要更多时间')">重置</a> 
+			<a href="?ac=delavc&id=<?php echo $v['id']?>" onClick="return confirm('删除？')">删除</a></td>
+		<td bgcolor="#FFFFFF"><a href="javascript:void(0)" onClick="avc(<?php echo $v['id']?>);" class="coolbg np">立即采集</a></td>
+	</tr>
+	<?php } ?>
+	<tr bgcolor="#F9FDF0">
+		<td height="28" colspan="4"><a href="cjx.php?ac=addavc" class="coolbg np">添加任务</a></td>
+	</tr>
+</table>
+<div id="footer" style="text-align:center; padding:10px;"></div>
+<script type="text/javascript">$(function(){$.getScript("http://www.yikenw.com/ad/dedecjx_footer.js");})</script>
+</body>
+</html>

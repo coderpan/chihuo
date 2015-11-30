@@ -1,0 +1,153 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=7">
+<title>{dede:global name='keyword' function='RemoveXSS(@me)'/} - {dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link href="{dede:field name='templeturl'/}/style/css/common.css" rel="stylesheet">
+<link href="{dede:field name='templeturl'/}/style/css/list.css" rel="stylesheet">
+<link href="{dede:field name='templeturl'/}/style/css/page.css" rel="stylesheet">
+<script src="{dede:field name='templeturl'/}/style/js/jquery1.8.3.min.js" charset="utf-8"></script>
+<link href="favicon.ico" type="image/x-icon">
+<style type="text/css">
+<!--
+.nav li {                   
+ display: inline;     
+ }
+-->
+</style>
+<base target="_blank">
+<div class="topbar">
+    <div class="w980">
+         {dede:include filename="head.htm"/}
+
+<div class="w980 clearfix">
+    <div class="w640">
+    <div class="crumbs">你的位置 : <a href='/'>首页</a> > {dede:global name='keyword' function='RemoveXSS(@me)'/} > 列表</div>
+
+        <h1 class="item">关键词:{dede:global name='keyword' function='RemoveXSS(@me)'/}</h1>
+        <div class="phlist  clearfix">
+          <p>{dede:list pagesize='16'}
+                      <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:list}{dede:list pagesize='64'}
+
+  <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:list}
+                      </p>
+        </div>
+       <div class="page"><ul class="pagelist">
+				<div class="nav">{dede:pagelist listitem="info,index,end,pre,next,pageno" listsize="5"/}</div>
+			</ul></div>
+        <div class="w640t"><h2>大家都在看</h2></div>
+        <div class="cppic">
+                              {dede:arclist typeid=2 row=8  col='4'  flag='c' orderby=pubdate}
+ <p>
+        <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}
+                            </p>
+        </div>
+     </div>
+     <div class="w300">
+        <div class="ad300">
+                广告位02
+                </div>
+        <h2 class="w300h2">热门食材</h2>
+        <div class="rmsc">
+                         {dede:channel type='son' typeid ='23' row ='10'}
+
+<a href='[field:typelink/]'>[field:typename/]</a> 
+
+{/dede:channel}
+                    </div>
+        <h2 class="w300h2">专题推荐</h2>
+        <ul class="zttj">
+                                   <li>   {dede:channel type='son' typeid ='11' row ='10' limit='0,4'}
+
+<a href='[field:typelink/]'>[field:typename/]</a> 
+
+{/dede:channel}            </li>    <li>   {dede:channel type='son' typeid ='11' row ='10' limit='5,9'}
+
+<a href='[field:typelink/]'>[field:typename/]</a> 
+
+{/dede:channel}            </li>    </ul>
+        <div class="ztpic">
+            <ul>    {dede:arclist typeid=all row=1 titlelen=20 infolen=120 flag ='h' orderby='pubdate' }
+                                                <li>
+                                       [field:imglink/]</a>
+                    <h3><span class="cr">常识</span><a href="[field:filename/]">[field:title/]</a></h3>{/dede:arclist}
+                    <p>   {dede:arclist typeid=2 row=4  titlelen=26   orderby='pubdate' }
+
+<a href='[field:arcurl/]'>[field:title/]</a>
+{/dede:arclist}
+                                          </p>
+                </li>
+                  {dede:arclist typeid=2 row=1 titlelen=20 infolen=120 flag ='h' orderby='pubdate' }
+                                                <li>
+                                       [field:imglink/]</a>
+                    <h3><span class="cy">美容</span><a href="[field:filename/]">[field:title/]</a></h3>{/dede:arclist}
+                    <p>   {dede:arclist typeid=1 row=4   titlelen=26  orderby='pubdate' }
+<a href='[field:arcurl/]'>[field:title/]</a>  
+{/dede:arclist}
+                                          </p>
+                </li>
+
+{dede:arclist typeid=2 row=1 titlelen=20 infolen=120 flag ='h' orderby='pubdate' }
+                                <li>
+                                        [field:imglink/]</a>
+                    <h3><span class="cg">母婴</span><a href="[field:filename/]">[field:title/]</a></h3>{/dede:arclist}
+                     <p>   {dede:arclist typeid=2 row=4  titlelen=26  orderby='pubdate' }
+<a href='[field:arcurl/]'>[field:title/]</a>  
+{/dede:arclist}
+                                          </p>
+                </li>
+                            </ul>
+        </div>
+        <div class="ad300 mt20"><script src="style/js/ad_nei_baidu_300X250_2.js"></script></div>
+        <h2 class="w300h2">热门推荐</h2>
+        <div class="rmtj">
+            <ul>  {dede:arclist typeid=2 row=3 titlelen=20 infolen=120 flag ='h' orderby='pubdate' }
+                                <li>
+                    [field:imglink/]
+                    <h3><a href="[field:filename/]">[field:title/]</a></h3>
+                    <p>[field:info/]</p>{/dede:arclist}
+                            </ul>
+        </div>
+        <div class="w300t"><h2>热门食谱</h2></div>
+        <div class="rmsc">
+                        {dede:channel type='son' typeid ='22' row ='18'}
+
+<a href='[field:typelink/]'>[field:typename/]</a> 
+
+{/dede:channel}
+                  </div>
+       <script src='style/js/ad_nei_baidu_yun_300X250.js'></script>
+        <h2 class="w300h2">美食图片</h2>
+        <div class="mstp clearfix">
+            <p>
+                        {dede:arclist  typeid='1,2' row='4' col='2'  channelid='1' flag='c' orderby=pubdate}
+
+        <a href="[field:arcurl/]">[field:image/]<span class="title">[field:title/]</span></a>
+
+        {/dede:arclist}
+                         </p>
+        </div>
+        <div class="ad300 mt20"><script src="style/js/ad_nei_baidu_300X250_3.js"></script></div>
+        <!--height85-->
+        <div style="height:85px"></div>
+    </div>
+</div>
+<script src="{dede:field name='templeturl'/}/style/js/footer.js"></script>
+<script src="{dede:field name='templeturl'/}/style/js/common.js"></script>
+<script src="{dede:field name='templeturl'/}/style/js/list.js"></script>
+<script type="text/javascript" id="bdshare_js" data="type=tools&uid=0" ></script>
+<script type="text/javascript" id="bdshell_js"></script>
+<script type="text/javascript">
+document.getElementById("bdshell_js").src = "http://bdimg.share.baidu.com/static/js/shell_v2.js?cdnversion=" + Math.ceil(new Date()/3600000)
+</script>
+<span style=" display:none"><script type="text/javascript">
+var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F44281dcdf56152ca40f5ff0a2e1b0890' type='text/javascript'%3E%3C/script%3E"));
+</script></span>

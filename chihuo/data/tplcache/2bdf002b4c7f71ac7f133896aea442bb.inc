@@ -1,0 +1,1 @@
+<a href="[field:typeurl/]" title="[field:fulltitle/]" >[[field:typename/]]<i>[field:title /]</i></a>

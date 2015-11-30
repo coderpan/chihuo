@@ -1,0 +1,1 @@
+INSERT INTO `chihuo_admin` VALUES('1','10','admin','f297a57a5a743894a0e4','admin','','','','1390044053','113.238.180.151');

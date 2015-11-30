@@ -1,0 +1,1 @@
+[field:image/]<span class="title">[field:title/]</span>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>采集侠</title>
+<link href="<?php echo $css?>/base.css" rel="stylesheet" type="text/css">
+<link href="apps/CaiJiXia/style/cjx.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" id="cjxjq" src="<?php echo $cjxhost?>/Plugins/apps/CaiJiXia/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="apps/CaiJiXia/style/dialog.js"></script>
+<script type="text/javascript" src="apps/CaiJiXia/style/cjx.js"></script>
+</head>
+<body topmargin="8">
+<table width="98%"  border="0" align="center" cellpadding="3" cellspacing="1" bgcolor="#D1DDAA">
+  <form name="form1" id="form1" action="###" method="post">
+    <tr> 
+      <td height="20" colspan="2" background="<?php echo $img?>/tbg.gif"> <b>&nbsp;采集侠 &gt; 高级设置：</b> </td>
+    </tr>
+    <tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">采集引擎接口：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+            <label><input type="radio" name="setting[kw_egapi]" value="bd">百度</label>
+            <label><input type="radio" name="setting[kw_egapi]" value="bdnews">百度新闻</label>
+            <label><input type="radio" name="setting[kw_egapi]" value="sgnews">搜狗新闻</label>
+            <label><input type="radio" name="setting[kw_egapi]" value="ydnews">有道新闻</label>
+            <label><input type="radio" name="setting[kw_egapi]" value="yh">雅虎</label>
+            <label><input type="radio" name="setting[kw_egapi]" value="bg">必应</label>
+<script type="text/javascript">
+$("input[name='setting\[kw_egapi\]'][value='<?php echo $kw_egapi;?>']").attr("checked","checked");
+</script>
+        </td>
+    </tr>
+    <tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">采集顺序：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input type="radio" name="setting[kw_sort]" value="0" <?php if($kw_sort==0) echo 'checked';?>>先后顺序 
+        <input name="setting[kw_sort]" type="radio" value="1" <?php if($kw_sort==1) echo 'checked';?>>随机顺序 
+        <span style="color:#666">（设置为随机顺序可使采集内容更加均匀分布在各个栏目）</span></td>
+    </tr>
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">文章最小字节数：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input name="setting[kw_maxbyte]" type="text" value="<?php echo $kw_maxbyte;?>">
+        <span style="color:#666">（字节少于设置值的不采集，只影响根据关键词采集，1汉字=2字节，建议100-1000）</span></td>
+    </tr>
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">默认作者：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input name="setting[kw_dwriter]" type="text" value="<?php echo $kw_dwriter;?>" style="width: 280px;">
+        <span style="color:#666">（采集不到时使用默认作者，多个用逗号分开，随机选择）</span></td>
+    </tr>
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">默认文章来源：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input name="setting[kw_dsource]" type="text" value="<?php echo $kw_dsource;?>" style="width: 280px;">
+        <span style="color:#666">（采集不到时使用默认来源，多个用逗号分开，随机选择）</span></td>
+    </tr>
+    <tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">手工新增文章伪原创SEO：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        <input type="radio" name="setting[kw_newadd]" value="1" <?php if($kw_newadd==1) echo 'checked';?>>是
+        <input name="setting[kw_newadd]" type="radio" value="0" <?php if($kw_newadd==0) echo 'checked';?>>否
+        <span style="color:#666">（手工添加文章也能伪原创，自动内链、同义词替换、插入seo词和链接、关键词添加链接）</span>
+        </td>
+    </tr>
+	<tr>
+        <td width="19%" align="center" bgcolor="#FFFFFF">内容过滤：</td>
+        <td width="81%" bgcolor="#FFFFFF">
+        包含以下词语的文章将不采集，如果只要删除该词语保留文章请写为{屏蔽词}<br>
+		多个请用‘|’分隔 如：神马|{给力}<br>
+        <textarea id="kw_cforbid" name="setting[kw_cforbid]" cols="100" rows="6"><?php echo $kw_cforbid;?></textarea>
+        </td>
+    </tr>
+	<tr>
+    	<td width="19%" align="center" bgcolor="#FFFFFF">网站过滤：</td>
+        <td width="81%" bgcolor="#FFFFFF">以下网站或者域名不采集，多个请用‘|’分隔 如：163.com|qq.com，则采集不到163、qq的文章<br>
+        <textarea name="setting[kw_lforbid]" cols="100" rows="6"><?php echo $kw_lforbid;?></textarea>
+        </td>
+    </tr>
+    
+    <tr bgcolor="#F9FDF0"> 
+      <td height="28" colspan="2">
+      	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr> 
+            <td width="26%">&nbsp;</td>
+            <td width="15%"><input name="imageField" class="np" type="image" src="<?php echo $img?>/button_ok.gif" width="60" height="22" border="0"></td>
+            <td width="59%"></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </form>
+</table>
+<div id="footer" style="text-align:center; padding:10px;"></div>
+<script type="text/javascript">$(function(){$.getScript("http://www.yikenw.com/ad/dedecjx_footer.js");})</script>
+</body>
+</html>
